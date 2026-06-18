@@ -1,0 +1,77 @@
+[gd_scene format=3 uid="uid://dfbnwo3i3yh88"]
+
+[ext_resource type="Theme" uid="uid://b5xp13uwnqjpc" path="res://Theme.tres" id="1_rtui7"]
+[ext_resource type="Script" uid="uid://b2wtuqydnf12l" path="res://Desktop/ConfirmClose/ConfirmClose.gd" id="2_iijv1"]
+[ext_resource type="AudioStream" uid="uid://dfv52em3cvn3l" path="res://Desktop/ConfirmClose/Warn.mp3" id="3_tn05h"]
+[ext_resource type="AudioStream" uid="uid://cc3fw6j1du3sa" path="res://Desktop/ConfirmClose/Close.mp3" id="4_s8a5d"]
+
+[node name="ConfirmClose" type="Window" unique_id=18224513]
+oversampling_override = 1.0
+title = "Warning!"
+initial_position = 1
+size = Vector2i(512, 256)
+transient = true
+exclusive = true
+minimize_disabled = true
+maximize_disabled = true
+theme = ExtResource("1_rtui7")
+script = ExtResource("2_iijv1")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1830990955]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="." unique_id=216472355]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 11.0
+offset_top = 8.0
+offset_right = -21.0
+offset_bottom = -165.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_rtui7")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Are you sure you want to quit?
+Progress will be lost."
+
+[node name="Quit" type="Button" parent="." unique_id=2041805496]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 18.0
+offset_top = 128.0
+offset_right = -367.0
+offset_bottom = -85.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_rtui7")
+text = "Quit"
+
+[node name="DontQuit" type="Button" parent="." unique_id=1340928693]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 19.0
+offset_top = 188.0
+offset_right = -366.0
+offset_bottom = -25.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_rtui7")
+text = "Don't Quit"
+
+[node name="WarnPlayer" type="AudioStreamPlayer" parent="." unique_id=1143157389]
+stream = ExtResource("3_tn05h")
+
+[node name="ClosePlayer" type="AudioStreamPlayer" parent="." unique_id=480368802]
+stream = ExtResource("4_s8a5d")
+
+[connection signal="close_requested" from="." to="." method="_on_close_requested"]
+[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="DontQuit" to="." method="_on_dont_quit_pressed"]

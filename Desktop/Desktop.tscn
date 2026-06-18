@@ -1,0 +1,286 @@
+[gd_scene format=3 uid="uid://bllv27s38r7ku"]
+
+[ext_resource type="Script" uid="uid://1hpaqogtro8q" path="res://Desktop/Desktop.gd" id="1_5h8ho"]
+[ext_resource type="Texture2D" uid="uid://01ih56et2a6" path="res://Desktop/OSicon.png" id="1_m0bc2"]
+[ext_resource type="Script" uid="uid://bakxvtiaoadcy" path="res://Desktop/Cover.gd" id="1_my5vw"]
+[ext_resource type="Theme" uid="uid://b5xp13uwnqjpc" path="res://Theme.tres" id="2_5h8ho"]
+[ext_resource type="Texture2D" uid="uid://bsarro43rvkbq" path="res://Desktop/PowerDown.png" id="4_hd7rb"]
+[ext_resource type="Texture2D" uid="uid://1r04cqruqmag" path="res://Desktop/Cookie/Cookie.png" id="6_kqoml"]
+[ext_resource type="Script" uid="uid://hpf2kvtdcvu6" path="res://Desktop/App/App.gd" id="6_wf8r5"]
+[ext_resource type="AudioStream" uid="uid://4ho0oold7amj" path="res://Desktop/Startup.mp3" id="7_27ihm"]
+[ext_resource type="Texture2D" uid="uid://bg10tjsabceat" path="res://Desktop/Pong/Icon.png" id="8_pum5o"]
+[ext_resource type="Texture2D" uid="uid://c3ldx4s68wi4q" path="res://Desktop/Calculator/Icon.png" id="8_vfxqx"]
+[ext_resource type="Texture2D" uid="uid://dcicokx6vge12" path="res://Desktop/Spreadsheet/Icon.png" id="9_vfxqx"]
+[ext_resource type="Texture2D" uid="uid://cosjl23vhga5n" path="res://Desktop/InfoDoc/Icon.png" id="10_crrsb"]
+[ext_resource type="Texture2D" uid="uid://bbgm4kso1e8qq" path="res://Desktop/Email/Icon.png" id="10_gsv74"]
+
+[sub_resource type="Gradient" id="Gradient_ujh53"]
+interpolation_mode = 2
+colors = PackedColorArray(0.2622328, 0.1648413, 0.54976, 1, 0.2512116, 0.17863, 0.63369966, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_my5vw"]
+gradient = SubResource("Gradient_ujh53")
+width = 1920
+height = 1080
+fill = 1
+fill_from = Vector2(0.8298611, 0.7376543)
+fill_to = Vector2(0, 0)
+
+[node name="Desktop" type="Window" unique_id=1637187721]
+oversampling_override = 1.0
+mode = 3
+initial_position = 4
+size = Vector2i(1536, 864)
+borderless = true
+content_scale_mode = 1
+script = ExtResource("1_5h8ho")
+
+[node name="Wallpaper" type="TextureRect" parent="." unique_id=1320919345]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_my5vw")
+
+[node name="BottomBar" type="ColorRect" parent="." unique_id=310647921]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -50.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.08239751, 0.013836622, 0.18483922, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="BottomBar" unique_id=1853191483]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.5
+anchor_bottom = 0.52000004
+offset_left = 51.0
+offset_top = -10.0
+offset_right = 146.0
+offset_bottom = 10.999998
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_5h8ho")
+text = "Triangle OS"
+metadata/_edit_use_anchors_ = true
+
+[node name="OSicon" type="Sprite2D" parent="BottomBar/Label" unique_id=2077670532]
+position = Vector2(-28, 10)
+scale = Vector2(0.546875, 0.546875)
+texture = ExtResource("1_m0bc2")
+
+[node name="Off" type="TextureButton" parent="BottomBar" unique_id=1223392]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_top = 0.48000002
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -41.0
+offset_top = -18.0
+offset_right = -5.000061
+offset_bottom = 17.0
+texture_normal = ExtResource("4_hd7rb")
+texture_pressed = ExtResource("4_hd7rb")
+texture_hover = ExtResource("4_hd7rb")
+texture_disabled = ExtResource("4_hd7rb")
+texture_focused = ExtResource("4_hd7rb")
+metadata/_edit_use_anchors_ = true
+
+[node name="Clock" type="Label" parent="BottomBar/Off" unique_id=1754314141]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -1.25
+anchor_top = 0.22200002
+anchor_right = -0.194
+anchor_bottom = 0.83300006
+offset_top = 0.00799942
+offset_right = -0.015999794
+offset_bottom = 0.011997223
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_5h8ho")
+text = "10:00"
+metadata/_edit_use_anchors_ = true
+
+[node name="Cookie" type="Node2D" parent="." unique_id=653047169]
+position = Vector2(70, 70)
+script = ExtResource("6_wf8r5")
+titleString = "Cookie"
+iconImage = ExtResource("6_kqoml")
+windowPath = "res://Desktop/Cookie/Cookie.tscn"
+metadata/_custom_type_script = "uid://hpf2kvtdcvu6"
+
+[node name="@Sprite2D@724936" type="Sprite2D" parent="Cookie" unique_id=497233225]
+texture = ExtResource("6_kqoml")
+
+[node name="@Label@724937" type="Label" parent="Cookie" unique_id=1231294126]
+offset_left = -28.0
+offset_top = 36.0
+offset_right = 28.0
+offset_bottom = 58.0
+theme = ExtResource("2_5h8ho")
+text = "Cookie"
+horizontal_alignment = 1
+
+[node name="@ColorRect@724938" type="ColorRect" parent="Cookie" unique_id=16933730]
+offset_left = -42.0
+offset_top = -37.0
+offset_right = 42.0
+offset_bottom = 53.0
+color = Color(1, 1, 1, 0)
+
+[node name="Pong" type="Node2D" parent="." unique_id=1259268614]
+position = Vector2(190, 70)
+script = ExtResource("6_wf8r5")
+titleString = "Pong"
+iconImage = ExtResource("8_pum5o")
+windowPath = "res://Desktop/Pong/Pong.tscn"
+metadata/_custom_type_script = "uid://hpf2kvtdcvu6"
+
+[node name="@Sprite2D@724939" type="Sprite2D" parent="Pong" unique_id=76796060]
+texture = ExtResource("8_pum5o")
+
+[node name="@Label@724940" type="Label" parent="Pong" unique_id=1935619173]
+offset_left = -20.5
+offset_top = 36.0
+offset_right = 20.5
+offset_bottom = 58.0
+theme = ExtResource("2_5h8ho")
+text = "Pong"
+horizontal_alignment = 1
+
+[node name="@ColorRect@724941" type="ColorRect" parent="Pong" unique_id=302220726]
+offset_left = -42.0
+offset_top = -37.0
+offset_right = 42.0
+offset_bottom = 53.0
+color = Color(1, 1, 1, 0)
+
+[node name="Calculator" type="Node2D" parent="." unique_id=817162988]
+position = Vector2(310, 70)
+script = ExtResource("6_wf8r5")
+titleString = "Calculator"
+iconImage = ExtResource("8_vfxqx")
+windowPath = "res://Desktop/Calculator/Calculator.tscn"
+metadata/_custom_type_script = "uid://hpf2kvtdcvu6"
+
+[node name="@Sprite2D@724942" type="Sprite2D" parent="Calculator" unique_id=944632177]
+texture = ExtResource("8_vfxqx")
+
+[node name="@Label@724943" type="Label" parent="Calculator" unique_id=747665220]
+offset_left = -43.0
+offset_top = 36.0
+offset_right = 43.0
+offset_bottom = 58.0
+theme = ExtResource("2_5h8ho")
+text = "Calculator"
+horizontal_alignment = 1
+
+[node name="@ColorRect@724944" type="ColorRect" parent="Calculator" unique_id=1634945452]
+offset_left = -42.0
+offset_top = -37.0
+offset_right = 42.0
+offset_bottom = 53.0
+color = Color(1, 1, 1, 0)
+
+[node name="Spreadsheet" type="Node2D" parent="." unique_id=1434704332]
+position = Vector2(430, 70)
+script = ExtResource("6_wf8r5")
+titleString = "Spreadsheet"
+iconImage = ExtResource("9_vfxqx")
+windowPath = "res://Desktop/Spreadsheet/Spreadsheet.tscn"
+metadata/_custom_type_script = "uid://hpf2kvtdcvu6"
+
+[node name="@Sprite2D@724945" type="Sprite2D" parent="Spreadsheet" unique_id=1420429066]
+texture = ExtResource("9_vfxqx")
+
+[node name="@Label@724946" type="Label" parent="Spreadsheet" unique_id=1649695517]
+offset_left = -50.5
+offset_top = 36.0
+offset_right = 50.5
+offset_bottom = 58.0
+theme = ExtResource("2_5h8ho")
+text = "Spreadsheet"
+horizontal_alignment = 1
+
+[node name="@ColorRect@724947" type="ColorRect" parent="Spreadsheet" unique_id=2055204619]
+offset_left = -42.0
+offset_top = -37.0
+offset_right = 42.0
+offset_bottom = 53.0
+color = Color(1, 1, 1, 0)
+
+[node name="Email" type="Node2D" parent="." unique_id=133033864]
+position = Vector2(553.59, 70)
+script = ExtResource("6_wf8r5")
+titleString = "E-Mail"
+iconImage = ExtResource("10_gsv74")
+windowPath = "res://Desktop/Email/Email.tscn"
+metadata/_custom_type_script = "uid://hpf2kvtdcvu6"
+
+[node name="@Sprite2D@724948" type="Sprite2D" parent="Email" unique_id=1659092241]
+texture = ExtResource("10_gsv74")
+
+[node name="@Label@724949" type="Label" parent="Email" unique_id=314232737]
+offset_left = -25.5
+offset_top = 36.0
+offset_right = 25.5
+offset_bottom = 58.0
+theme = ExtResource("2_5h8ho")
+text = "E-Mail"
+horizontal_alignment = 1
+
+[node name="@ColorRect@724950" type="ColorRect" parent="Email" unique_id=208327379]
+offset_left = -42.0
+offset_top = -37.0
+offset_right = 42.0
+offset_bottom = 53.0
+color = Color(1, 1, 1, 0)
+
+[node name="InfoDoc" type="Node2D" parent="." unique_id=240008568]
+position = Vector2(670, 70)
+script = ExtResource("6_wf8r5")
+titleString = "Info.txt"
+iconImage = ExtResource("10_crrsb")
+windowPath = "res://Desktop/InfoDoc/InfoDoc.tscn"
+metadata/_custom_type_script = "uid://hpf2kvtdcvu6"
+
+[node name="@Sprite2D@724951" type="Sprite2D" parent="InfoDoc" unique_id=870750845]
+texture = ExtResource("10_crrsb")
+
+[node name="@Label@724952" type="Label" parent="InfoDoc" unique_id=1908259919]
+offset_left = -28.0
+offset_top = 36.0
+offset_right = 28.0
+offset_bottom = 58.0
+theme = ExtResource("2_5h8ho")
+text = "Info.txt"
+horizontal_alignment = 1
+
+[node name="@ColorRect@724953" type="ColorRect" parent="InfoDoc" unique_id=816802469]
+offset_left = -42.0
+offset_top = -37.0
+offset_right = 42.0
+offset_bottom = 53.0
+color = Color(1, 1, 1, 0)
+
+[node name="Cover" type="ColorRect" parent="." unique_id=1373664585]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+script = ExtResource("1_my5vw")
+
+[node name="StartupPlayer" type="AudioStreamPlayer" parent="Cover" unique_id=1257091799]
+stream = ExtResource("7_27ihm")
+
+[connection signal="pressed" from="BottomBar/Off" to="." method="_on_texture_button_pressed"]

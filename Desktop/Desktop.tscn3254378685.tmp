@@ -1,0 +1,140 @@
+[gd_scene format=3 uid="uid://bllv27s38r7ku"]
+
+[ext_resource type="Script" uid="uid://1hpaqogtro8q" path="res://Desktop/Desktop.gd" id="1_5h8ho"]
+[ext_resource type="Texture2D" uid="uid://01ih56et2a6" path="res://Desktop/OSicon.png" id="1_m0bc2"]
+[ext_resource type="Script" uid="uid://bakxvtiaoadcy" path="res://Desktop/Cover.gd" id="1_my5vw"]
+[ext_resource type="Theme" uid="uid://b5xp13uwnqjpc" path="res://Theme.tres" id="2_5h8ho"]
+[ext_resource type="Texture2D" uid="uid://bsarro43rvkbq" path="res://Desktop/PowerDown.png" id="4_hd7rb"]
+[ext_resource type="Script" uid="uid://hpf2kvtdcvu6" path="res://Desktop/App/App.gd" id="6_wf8r5"]
+
+[sub_resource type="Gradient" id="Gradient_ujh53"]
+interpolation_mode = 2
+colors = PackedColorArray(0.2622328, 0.1648413, 0.54976, 1, 0.2512116, 0.17863, 0.63369966, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_my5vw"]
+gradient = SubResource("Gradient_ujh53")
+width = 1920
+height = 1080
+fill = 1
+fill_from = Vector2(0.8298611, 0.7376543)
+fill_to = Vector2(0, 0)
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_wf8r5"]
+size = Vector2(64, 64)
+
+[node name="Desktop" type="Window" unique_id=1637187721]
+oversampling_override = 1.0
+mode = 3
+initial_position = 1
+size = Vector2i(1920, 1080)
+borderless = true
+content_scale_mode = 1
+script = ExtResource("1_5h8ho")
+
+[node name="Wallpaper" type="TextureRect" parent="." unique_id=1320919345]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_my5vw")
+
+[node name="BottomBar" type="ColorRect" parent="." unique_id=310647921]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -960.0
+offset_top = -50.0
+offset_right = 960.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.08239751, 0.013836622, 0.18483922, 1)
+
+[node name="OSicon" type="Sprite2D" parent="BottomBar" unique_id=2077670532]
+position = Vector2(24, 25)
+scale = Vector2(0.546875, 0.546875)
+texture = ExtResource("1_m0bc2")
+
+[node name="Label" type="Label" parent="BottomBar" unique_id=1853191483]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 52.0
+offset_top = 15.0
+offset_right = 83.0
+offset_bottom = -13.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_5h8ho")
+text = "Triangle OS"
+
+[node name="Clock" type="Label" parent="BottomBar" unique_id=1754314141]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1824.0
+offset_top = 14.0
+offset_right = -58.0
+offset_bottom = -14.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_5h8ho")
+text = "10:00"
+
+[node name="TextureButton" type="TextureButton" parent="BottomBar" unique_id=1223392]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1872.0
+offset_top = 7.0
+offset_right = -12.0
+offset_bottom = -7.0
+texture_normal = ExtResource("4_hd7rb")
+texture_pressed = ExtResource("4_hd7rb")
+texture_hover = ExtResource("4_hd7rb")
+texture_disabled = ExtResource("4_hd7rb")
+texture_focused = ExtResource("4_hd7rb")
+
+[node name="App" type="Node2D" parent="." unique_id=608622706]
+position = Vector2(85, 78)
+script = ExtResource("6_wf8r5")
+titleString = "QuitterTest.exe"
+iconImage = SubResource("PlaceholderTexture2D_wf8r5")
+windowPath = "res://Desktop/ConfirmClose/ConfirmClose.tscn"
+metadata/_custom_type_script = "uid://hpf2kvtdcvu6"
+
+[node name="@Label@69988" type="Label" parent="App" unique_id=2058260507]
+offset_left = -60.0
+offset_top = 32.0
+offset_right = 60.0
+offset_bottom = 54.0
+theme = ExtResource("2_5h8ho")
+text = "QuitterTest.exe"
+horizontal_alignment = 1
+
+[node name="@ColorRect@69989" type="ColorRect" parent="App" unique_id=715804113]
+offset_left = -42.0
+offset_top = -37.0
+offset_right = 42.0
+offset_bottom = 53.0
+color = Color(1, 1, 1, 0)
+
+[node name="@Sprite2D@71399" type="Sprite2D" parent="App" unique_id=1841059507]
+texture = SubResource("PlaceholderTexture2D_wf8r5")
+
+[node name="Cover" type="ColorRect" parent="." unique_id=1373664585]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+script = ExtResource("1_my5vw")
+
+[connection signal="pressed" from="BottomBar/TextureButton" to="." method="_on_texture_button_pressed"]

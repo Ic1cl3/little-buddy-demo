@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://j3aj6klvqg1a"]
+
+[ext_resource type="Theme" uid="uid://b5xp13uwnqjpc" path="res://Theme.tres" id="1_ljpal"]
+[ext_resource type="Script" uid="uid://dy6dgd5scxb4u" path="res://Cookie.gd" id="2_bwk7b"]
+[ext_resource type="Texture2D" uid="uid://1r04cqruqmag" path="res://Desktop/Cookie/Cookie.png" id="3_y703m"]
+[ext_resource type="AudioStream" uid="uid://btojfai5jpqad" path="res://Desktop/Cookie/Nom.mp3" id="4_bwk7b"]
+
+[node name="Cookie" type="Window" unique_id=1359284812]
+transparent_bg = true
+oversampling_override = 1.0
+title = "Cookie"
+initial_position = 1
+size = Vector2i(256, 256)
+transient = true
+unresizable = true
+transparent = true
+maximize_disabled = true
+theme = ExtResource("1_ljpal")
+script = ExtResource("2_bwk7b")
+
+[node name="Cookie1" type="Sprite2D" parent="." unique_id=2082782895]
+position = Vector2(66, 61)
+texture = ExtResource("3_y703m")
+
+[node name="Cookie2" type="Sprite2D" parent="." unique_id=1300672473]
+position = Vector2(48, 178)
+texture = ExtResource("3_y703m")
+
+[node name="Cookie3" type="Sprite2D" parent="." unique_id=1232933836]
+position = Vector2(188, 86)
+texture = ExtResource("3_y703m")
+
+[node name="Cookie4" type="Sprite2D" parent="." unique_id=468921709]
+position = Vector2(126, 137)
+texture = ExtResource("3_y703m")
+
+[node name="Cookie5" type="Sprite2D" parent="." unique_id=38001770]
+position = Vector2(205, 191)
+texture = ExtResource("3_y703m")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=554650811]
+stream = ExtResource("4_bwk7b")
+volume_db = -13.277
+pitch_scale = 0.8

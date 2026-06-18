@@ -1,0 +1,82 @@
+[gd_scene format=3 uid="uid://cxv4qia7uyuyk"]
+
+[ext_resource type="Theme" uid="uid://b5xp13uwnqjpc" path="res://Theme.tres" id="1_uy5pn"]
+[ext_resource type="Texture2D" uid="uid://b33spt0jal4lp" path="res://Desktop/Vent/Amog.png" id="2_15gwc"]
+[ext_resource type="Script" uid="uid://btjdhvgrpds08" path="res://Desktop/Vent/Amogus.gd" id="2_xdw8h"]
+[ext_resource type="AudioStream" uid="uid://dee3exmirt8go" path="res://Desktop/Vent/Vent.mp3" id="4_myl8i"]
+
+[node name="Amogus" type="Window" unique_id=1096657256]
+oversampling_override = 1.0
+title = "Bro vented!"
+initial_position = 1
+size = Vector2i(256, 256)
+transient = true
+unresizable = true
+maximize_disabled = true
+theme = ExtResource("1_uy5pn")
+script = ExtResource("2_xdw8h")
+
+[node name="Background" type="ColorRect" parent="." unique_id=881038295]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.15415636, 0.15415636, 0.15415633, 1)
+
+[node name="Vline1" type="ColorRect" parent="Background" unique_id=1815570803]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 27.0
+offset_top = 77.0
+offset_right = -29.0
+offset_bottom = -160.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.21446273, 0.21446273, 0.21446267, 1)
+
+[node name="Vline2" type="ColorRect" parent="Background" unique_id=1470037550]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 27.0
+offset_top = 118.0
+offset_right = -29.0
+offset_bottom = -119.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.21446273, 0.21446273, 0.21446267, 1)
+
+[node name="Vline3" type="ColorRect" parent="Background" unique_id=1586148872]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 27.0
+offset_top = 157.0
+offset_right = -29.0
+offset_bottom = -80.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.21446273, 0.21446273, 0.21446267, 1)
+
+[node name="Amog" type="TextureRect" parent="." unique_id=2059340626]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 62.0
+offset_top = 135.0
+offset_right = -66.0
+offset_bottom = 7.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(0, 128)
+texture = ExtResource("2_15gwc")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=143890558]
+stream = ExtResource("4_myl8i")
+volume_db = -12.649
+pitch_scale = 2.27

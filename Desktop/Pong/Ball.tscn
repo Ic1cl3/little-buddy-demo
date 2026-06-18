@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://bsgxlmrrn4yjn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_huwek"]
+size = Vector2(16, 16)
+
+[node name="Ball" type="CharacterBody2D" unique_id=368432676]
+motion_mode = 1
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=2097440730]
+offset_left = -8.0
+offset_top = -8.0
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=254516922]
+shape = SubResource("RectangleShape2D_huwek")

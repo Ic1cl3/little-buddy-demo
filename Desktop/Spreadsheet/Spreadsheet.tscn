@@ -1,0 +1,300 @@
+[gd_scene format=3 uid="uid://ddt38045yrrty"]
+
+[ext_resource type="Theme" uid="uid://b5xp13uwnqjpc" path="res://Theme.tres" id="1_1uflm"]
+[ext_resource type="PackedScene" uid="uid://dh8x5yd47psye" path="res://Desktop/Spreadsheet/CellPair.tscn" id="2_egwvx"]
+[ext_resource type="Script" uid="uid://4pwua1h513ry" path="res://Desktop/Spreadsheet/Spreadsheet.gd" id="2_i20nd"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_egwvx"]
+draw_center = false
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i20nd"]
+draw_center = false
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1iwxx"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(1, 1, 1, 0.49411765)
+draw_center = false
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.7238073, 0.7238074, 0.72380704, 1)
+corner_detail = 5
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vsi7c"]
+bg_color = Color(1, 1, 1, 1)
+draw_center = false
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gbjp7"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(1, 1, 1, 0.49411765)
+draw_center = false
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.7238073, 0.7238074, 0.72380704, 1)
+corner_detail = 5
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_70d0t"]
+draw_center = false
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x7ml1"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(1, 1, 1, 0.49411765)
+draw_center = false
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.7238073, 0.7238074, 0.72380704, 1)
+corner_detail = 5
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+
+[node name="Window" type="Window" unique_id=475063830]
+oversampling_override = 1.0
+title = "Spreadsheet"
+initial_position = 1
+size = Vector2i(800, 800)
+transient = true
+unresizable = true
+maximize_disabled = true
+theme = ExtResource("1_1uflm")
+script = ExtResource("2_i20nd")
+
+[node name="Background" type="ColorRect" parent="." unique_id=1708408061]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.08432398, 0.050131693, 0.13228956, 1)
+
+[node name="Panel" type="Panel" parent="." unique_id=1706378978]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 14.0
+offset_top = 158.0
+offset_right = -14.0
+offset_bottom = -14.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_egwvx")
+
+[node name="Label0" type="Label" parent="." unique_id=631600481]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 52.0
+offset_bottom = -696.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 40
+text = "Mango-Cookie Dealings"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label1" type="Label" parent="." unique_id=931726662]
+offset_left = 16.0
+offset_top = 160.0
+offset_right = 272.0
+offset_bottom = 208.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_i20nd")
+theme_override_styles/focus = SubResource("StyleBoxFlat_1iwxx")
+text = "Class One Cases"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="." unique_id=1786007624]
+offset_left = 272.0
+offset_top = 160.0
+offset_right = 528.00024
+offset_bottom = 208.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_vsi7c")
+theme_override_styles/focus = SubResource("StyleBoxFlat_gbjp7")
+text = "Class Two Cases"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="." unique_id=1432047679]
+offset_left = 528.0
+offset_top = 160.0
+offset_right = 784.00024
+offset_bottom = 208.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_70d0t")
+theme_override_styles/focus = SubResource("StyleBoxFlat_x7ml1")
+text = "Unclassified Data"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Sheet" type="GridContainer" parent="." unique_id=1206834385]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 16.0
+offset_top = 208.0
+offset_right = -16.0
+offset_bottom = -16.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/h_separation = 256
+theme_override_constants/v_separation = 48
+columns = 3
+
+[node name="CellPair1" parent="Sheet" unique_id=1127092677 instance=ExtResource("2_egwvx")]
+layout_mode = 2
+
+[node name="CellPair2" parent="Sheet" unique_id=393322977 instance=ExtResource("2_egwvx")]
+layout_mode = 2
+
+[node name="CellPair3" parent="Sheet" unique_id=1465634731 instance=ExtResource("2_egwvx")]
+layout_mode = 2
+
+[node name="CellPair4" parent="Sheet" unique_id=1832134687 instance=ExtResource("2_egwvx")]
+layout_mode = 2
+
+[node name="CellPair5" parent="Sheet" unique_id=1775343961 instance=ExtResource("2_egwvx")]
+layout_mode = 2
+
+[node name="CellPair6" parent="Sheet" unique_id=209021005 instance=ExtResource("2_egwvx")]
+layout_mode = 2
+
+[node name="CellPair7" parent="Sheet" unique_id=528574939 instance=ExtResource("2_egwvx")]
+layout_mode = 2
+
+[node name="CellPair8" parent="Sheet" unique_id=1450399956 instance=ExtResource("2_egwvx")]
+layout_mode = 2
+
+[node name="CellPair9" parent="Sheet" unique_id=241484984 instance=ExtResource("2_egwvx")]
+layout_mode = 2
+
+[node name="CellPair10" parent="Sheet" unique_id=1816488053 instance=ExtResource("2_egwvx")]
+layout_mode = 2
+
+[node name="CellPair11" parent="Sheet" unique_id=1023347817 instance=ExtResource("2_egwvx")]
+layout_mode = 2
+
+[node name="CellPair12" parent="Sheet" unique_id=1728849722 instance=ExtResource("2_egwvx")]
+layout_mode = 2
+
+[node name="CellPair13" parent="Sheet" unique_id=1645025272 instance=ExtResource("2_egwvx")]
+layout_mode = 2
+
+[node name="CellPair14" parent="Sheet" unique_id=1570510860 instance=ExtResource("2_egwvx")]
+layout_mode = 2
+
+[node name="CellPair15" parent="Sheet" unique_id=1902172496 instance=ExtResource("2_egwvx")]
+layout_mode = 2
+
+[node name="CellPair16" parent="Sheet" unique_id=2006907988 instance=ExtResource("2_egwvx")]
+layout_mode = 2
+
+[node name="CellPair17" parent="Sheet" unique_id=398899148 instance=ExtResource("2_egwvx")]
+layout_mode = 2
+
+[node name="CellPair18" parent="Sheet" unique_id=514509205 instance=ExtResource("2_egwvx")]
+layout_mode = 2
+
+[node name="CellPair19" parent="Sheet" unique_id=912672679 instance=ExtResource("2_egwvx")]
+layout_mode = 2
+
+[node name="CellPair20" parent="Sheet" unique_id=1479123185 instance=ExtResource("2_egwvx")]
+layout_mode = 2
+
+[node name="CellPair21" parent="Sheet" unique_id=1675265728 instance=ExtResource("2_egwvx")]
+layout_mode = 2
+
+[node name="CellPair22" parent="Sheet" unique_id=1172831334 instance=ExtResource("2_egwvx")]
+layout_mode = 2
+
+[node name="CellPair23" parent="Sheet" unique_id=363255157 instance=ExtResource("2_egwvx")]
+layout_mode = 2
+
+[node name="CellPair24" parent="Sheet" unique_id=1234140184 instance=ExtResource("2_egwvx")]
+layout_mode = 2
+
+[node name="CellPair25" parent="Sheet" unique_id=1083263457 instance=ExtResource("2_egwvx")]
+layout_mode = 2
+
+[node name="CellPair26" parent="Sheet" unique_id=2093101206 instance=ExtResource("2_egwvx")]
+layout_mode = 2
+
+[node name="CellPair27" parent="Sheet" unique_id=346447138 instance=ExtResource("2_egwvx")]
+layout_mode = 2
+
+[node name="CellPair28" parent="Sheet" unique_id=1442840869 instance=ExtResource("2_egwvx")]
+layout_mode = 2
+
+[node name="CellPair29" parent="Sheet" unique_id=1870317866 instance=ExtResource("2_egwvx")]
+layout_mode = 2
+
+[node name="CellPair30" parent="Sheet" unique_id=841122094 instance=ExtResource("2_egwvx")]
+layout_mode = 2
+
+[node name="CellPair31" parent="Sheet" unique_id=1902622658 instance=ExtResource("2_egwvx")]
+layout_mode = 2
+
+[node name="CellPair32" parent="Sheet" unique_id=1072464769 instance=ExtResource("2_egwvx")]
+layout_mode = 2
+
+[node name="CellPair33" parent="Sheet" unique_id=676003850 instance=ExtResource("2_egwvx")]
+layout_mode = 2
+
+[node name="CellPair34" parent="Sheet" unique_id=561409635 instance=ExtResource("2_egwvx")]
+layout_mode = 2
+
+[node name="CellPair35" parent="Sheet" unique_id=2139057547 instance=ExtResource("2_egwvx")]
+layout_mode = 2
+
+[node name="CellPair36" parent="Sheet" unique_id=1029326128 instance=ExtResource("2_egwvx")]
+layout_mode = 2
+
+[connection signal="close_requested" from="." to="." method="_on_close_requested"]

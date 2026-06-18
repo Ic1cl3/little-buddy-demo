@@ -1,0 +1,89 @@
+[gd_scene format=3 uid="uid://bmnthgbdgas6v"]
+
+[ext_resource type="Theme" uid="uid://b5xp13uwnqjpc" path="res://Theme.tres" id="1_i0kjd"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yfmt7"]
+bg_color = Color(0.0706104, 0.019167779, 0.09308558, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7di45"]
+bg_color = Color(0.12068748, 0.038685296, 0.22385293, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qfg83"]
+content_margin_left = 10.0
+content_margin_top = 4.0
+content_margin_right = 10.0
+content_margin_bottom = 4.0
+bg_color = Color(0.12156863, 0.039215688, 0.22352941, 1)
+border_color = Color(0.07058824, 0.019607844, 0.09411765, 1)
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r8esi"]
+content_margin_left = 10.0
+content_margin_top = 4.0
+content_margin_right = 10.0
+content_margin_bottom = 4.0
+bg_color = Color(0.1, 0.1, 0.1, 0.3)
+border_color = Color(0.175, 0.175, 0.175, 1)
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7s6p7"]
+content_margin_left = 10.0
+content_margin_top = 4.0
+content_margin_right = 10.0
+content_margin_bottom = 4.0
+bg_color = Color(0.07058824, 0.019607844, 0.09411765, 1)
+border_width_left = 6
+border_width_right = 6
+border_color = Color(0.07058824, 0.019607844, 0.09411765, 1)
+corner_detail = 1
+expand_margin_left = 6.0
+expand_margin_right = 6.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xx5vo"]
+
+[node name="Email" type="Window" unique_id=1975869652]
+oversampling_override = 1.0
+title = "Electronic Mail"
+initial_position = 1
+size = Vector2i(512, 512)
+transient = true
+unresizable = true
+maximize_disabled = true
+theme = ExtResource("1_i0kjd")
+
+[node name="TabContainer" type="TabContainer" parent="." unique_id=1341747278]
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_yfmt7")
+theme_override_styles/tabbar_background = SubResource("StyleBoxFlat_7di45")
+theme_override_styles/tab_unselected = SubResource("StyleBoxFlat_qfg83")
+theme_override_styles/tab_hovered = SubResource("StyleBoxFlat_r8esi")
+theme_override_styles/tab_selected = SubResource("StyleBoxFlat_7s6p7")
+theme_override_styles/tab_focus = SubResource("StyleBoxEmpty_xx5vo")
+tab_alignment = 1
+current_tab = 1
+tab_0/title = "            Get Mail            "
+tab_1/title = "            Send Mail            "
+
+[node name="GetMail" type="ScrollContainer" parent="TabContainer" unique_id=2080061805]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 0
+metadata/_tab_name = "            Get Mail            "
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/GetMail" unique_id=1147078609]
+layout_mode = 2
+
+[node name="SendMail" type="Control" parent="TabContainer" unique_id=1679618558]
+layout_mode = 2
+metadata/_tab_index = 1
+metadata/_tab_name = "            Send Mail            "
+
+[node name="TextEdit" type="TextEdit" parent="TabContainer/SendMail" unique_id=597039319]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 30.0

@@ -1,0 +1,92 @@
+[gd_scene format=3 uid="uid://dk45e80g6wg8a"]
+
+[ext_resource type="Theme" uid="uid://b5xp13uwnqjpc" path="res://Theme.tres" id="1_e56cd"]
+[ext_resource type="Script" uid="uid://hbvg5yymndt5" path="res://Menu/Menu.gd" id="1_jf1j2"]
+
+[sub_resource type="Gradient" id="Gradient_e56cd"]
+colors = PackedColorArray(0.5612889, 0.50932455, 0.91271544, 1, 0.18212655, 0.38206396, 0.7448189, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_e56cd"]
+frequency = 0.0003
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_crea4"]
+noise = SubResource("FastNoiseLite_e56cd")
+color_ramp = SubResource("Gradient_e56cd")
+
+[node name="Menu" type="Window" unique_id=2104288806]
+oversampling_override = 1.0
+title = "Main Menu"
+initial_position = 4
+size = Vector2i(512, 512)
+unresizable = true
+maximize_disabled = true
+theme = ExtResource("1_e56cd")
+script = ExtResource("1_jf1j2")
+
+[node name="Background" type="TextureRect" parent="." unique_id=276065166]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("NoiseTexture2D_crea4")
+
+[node name="Title" type="Label" parent="." unique_id=1370332769]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 106.0
+offset_top = 89.0
+offset_right = -108.0
+offset_bottom = -361.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(149, 31)
+theme = ExtResource("1_e56cd")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.827451)
+theme_override_font_sizes/font_size = 48
+text = "Little Buddy!"
+
+[node name="Play" type="Button" parent="." unique_id=761015774]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 182.0
+offset_top = 193.0
+offset_right = -182.0
+offset_bottom = -272.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_e56cd")
+text = "Play"
+
+[node name="Settings" type="Button" parent="." unique_id=575968308]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 182.0
+offset_top = 249.0
+offset_right = -182.0
+offset_bottom = -216.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_e56cd")
+text = "Settings"
+
+[node name="DontPlay" type="Button" parent="." unique_id=1706445277]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 182.0
+offset_top = 305.0
+offset_right = -182.0
+offset_bottom = -160.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_e56cd")
+text = "Don't Play"
+
+[connection signal="close_requested" from="." to="." method="_on_close_requested"]
+[connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Settings" to="." method="_on_settings_pressed"]

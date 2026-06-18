@@ -1,0 +1,105 @@
+[gd_scene format=3 uid="uid://bqkloodlcp375"]
+
+[ext_resource type="Theme" uid="uid://b5xp13uwnqjpc" path="res://Theme.tres" id="1_wlr0s"]
+[ext_resource type="Script" uid="uid://w7cuufuucw35" path="res://Desktop/Pong/Pong.gd" id="2_cr62s"]
+[ext_resource type="PackedScene" uid="uid://cunykx0moy1di" path="res://Desktop/Pong/Paddle.tscn" id="2_xolim"]
+[ext_resource type="FontFile" uid="uid://dj8dgpnf5dtae" path="res://SourceCodePro-VariableFont_wght.ttf" id="3_miqrk"]
+[ext_resource type="PackedScene" uid="uid://bsgxlmrrn4yjn" path="res://Desktop/Pong/Ball.tscn" id="3_smhcp"]
+[ext_resource type="PackedScene" uid="uid://d3xa73hi4qllp" path="res://Desktop/Pong/Edge.tscn" id="4_wlkkf"]
+[ext_resource type="AudioStream" uid="uid://cxwlk0kxdr7mr" path="res://Desktop/Pong/Bounce.mp3" id="7_bq606"]
+[ext_resource type="AudioStream" uid="uid://2i52iy1redpy" path="res://Desktop/Pong/GainPoint.mp3" id="8_6sog4"]
+[ext_resource type="AudioStream" uid="uid://cn7qy3wwpqtdj" path="res://Desktop/Pong/LosePoint.mp3" id="9_ixwjp"]
+
+[node name="Pong" type="Window" unique_id=653992791]
+oversampling_override = 1.0
+title = "Pong"
+initial_position = 1
+size = Vector2i(512, 512)
+transient = true
+unresizable = true
+maximize_disabled = true
+theme = ExtResource("1_wlr0s")
+script = ExtResource("2_cr62s")
+
+[node name="Background" type="ColorRect" parent="." unique_id=1304374361]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Leftscore" type="Label" parent="." unique_id=941908362]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.0
+offset_top = 38.0
+offset_right = -273.0
+offset_bottom = -432.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_wlr0s")
+theme_override_fonts/font = ExtResource("3_miqrk")
+theme_override_font_sizes/font_size = 32
+text = "0"
+horizontal_alignment = 2
+
+[node name="Rightscore" type="Label" parent="." unique_id=1631756271]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 271.0
+offset_top = 38.0
+offset_right = 22.0
+offset_bottom = -432.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_wlr0s")
+theme_override_fonts/font = ExtResource("3_miqrk")
+theme_override_font_sizes/font_size = 32
+text = "0"
+
+[node name="Paddle1" parent="." unique_id=1566148966 instance=ExtResource("2_xolim")]
+position = Vector2(40, 255)
+
+[node name="Paddle2" parent="." unique_id=703729363 instance=ExtResource("2_xolim")]
+position = Vector2(472, 255)
+
+[node name="Ball" parent="." unique_id=368432676 instance=ExtResource("3_smhcp")]
+position = Vector2(256, 256)
+collision_mask = 3
+
+[node name="Edge1" parent="." unique_id=963062426 instance=ExtResource("4_wlkkf")]
+position = Vector2(256, 514)
+
+[node name="Edge2" parent="." unique_id=111523368 instance=ExtResource("4_wlkkf")]
+position = Vector2(256, 0)
+
+[node name="Bounds" type="StaticBody2D" parent="." unique_id=1615905208]
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="Bounds" unique_id=1782283764]
+polygon = PackedVector2Array(0, 0, 512, 0, 687, 1, 684, 512, 470, 512, 0, 512, 0, 508, 677, 507, 679, 4, 0, 4)
+
+[node name="Bounce" type="AudioStreamPlayer" parent="." unique_id=1483997840]
+stream = ExtResource("7_bq606")
+volume_db = -10.0
+pitch_scale = 1.16
+
+[node name="Win" type="AudioStreamPlayer" parent="." unique_id=1457102408]
+stream = ExtResource("8_6sog4")
+volume_db = -5.652
+pitch_scale = 1.16
+
+[node name="Lose" type="AudioStreamPlayer" parent="." unique_id=1046602353]
+stream = ExtResource("9_ixwjp")
+volume_db = -4.918
+pitch_scale = 1.16
+
+[connection signal="close_requested" from="." to="." method="_on_close_requested"]
+[connection signal="body_entered" from="Paddle1" to="." method="_on_left_paddle_body_entered"]
+[connection signal="body_entered" from="Paddle2" to="." method="_on_right_paddle_body_entered"]
+[connection signal="body_entered" from="Edge1" to="." method="_on_bottom_edge_body_entered"]
+[connection signal="body_entered" from="Edge2" to="." method="_on_top_edge_body_entered"]

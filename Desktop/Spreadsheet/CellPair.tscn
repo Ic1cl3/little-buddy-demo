@@ -1,0 +1,70 @@
+[gd_scene format=3 uid="uid://dh8x5yd47psye"]
+
+[ext_resource type="Theme" uid="uid://b5xp13uwnqjpc" path="res://Theme.tres" id="1_b2kx7"]
+[ext_resource type="Script" uid="uid://cx2c45xupod6b" path="res://Desktop/Spreadsheet/CellPair.gd" id="2_sq3xc"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sq3xc"]
+draw_center = false
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o8md8"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(1, 1, 1, 0.49411765)
+draw_center = false
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.6624846, 0.52278703, 0.99906415, 0.89411765)
+corner_detail = 5
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sq3xc"]
+
+[node name="CellPair" type="Control" unique_id=1127092677]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 256.0
+offset_bottom = 48.0
+theme = ExtResource("1_b2kx7")
+script = ExtResource("2_sq3xc")
+LeftVal = "ded"
+
+[node name="Background" type="ColorRect" parent="." unique_id=2072920912]
+layout_mode = 0
+offset_right = 256.0
+offset_bottom = 48.0
+color = Color(0.08627451, 0.050980393, 0.13333334, 1)
+
+[node name="LeftSide" type="Label" parent="." unique_id=96720727]
+layout_mode = 0
+offset_right = 128.0
+offset_bottom = 48.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_sq3xc")
+theme_override_styles/focus = SubResource("StyleBoxFlat_o8md8")
+text = "ded"
+vertical_alignment = 1
+clip_text = true
+
+[node name="RightSide" type="LineEdit" parent="." unique_id=1057939793]
+layout_mode = 0
+offset_left = 128.0
+offset_right = 256.0
+offset_bottom = 48.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_uneditable_color = Color(0.8745098, 0.8745098, 0.8745098, 0.26666668)
+theme_override_colors/font_placeholder_color = Color(0.8745098, 0.8745098, 0.8745098, 0.28627452)
+theme_override_colors/caret_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_sq3xc")
+theme_override_styles/read_only = SubResource("StyleBoxEmpty_sq3xc")
+theme_override_styles/focus = SubResource("StyleBoxFlat_o8md8")
+placeholder_text = "$xx.xx"

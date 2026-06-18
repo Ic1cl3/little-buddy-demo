@@ -1,0 +1,243 @@
+[gd_scene format=3 uid="uid://dfaj2m5g7k5fo"]
+
+[ext_resource type="Theme" uid="uid://b5xp13uwnqjpc" path="res://Theme.tres" id="1_pqo0r"]
+[ext_resource type="Script" uid="uid://ciplujurlb40u" path="res://Desktop/InfoDoc/InfoDoc.gd" id="2_g5isg"]
+[ext_resource type="Texture2D" uid="uid://de0rpujjlujg" path="res://Desktop/InfoDoc/Mango.png" id="3_tm6ed"]
+[ext_resource type="Texture2D" uid="uid://1r04cqruqmag" path="res://Desktop/Cookie/Cookie.png" id="4_c0w7x"]
+[ext_resource type="FontFile" uid="uid://dj8dgpnf5dtae" path="res://SourceCodePro-VariableFont_wght.ttf" id="5_c0w7x"]
+
+[node name="InfoDoc" type="Window" unique_id=118261622]
+oversampling_override = 1.0
+title = "Info.txt"
+initial_position = 1
+size = Vector2i(512, 512)
+transient = true
+unresizable = true
+maximize_disabled = true
+theme = ExtResource("1_pqo0r")
+script = ExtResource("2_g5isg")
+
+[node name="Background" type="ColorRect" parent="." unique_id=510546889]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.08313193, 0.08313195, 0.08313193, 1)
+
+[node name="ScrollContainer" type="ScrollContainer" parent="." unique_id=352405108]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = -16.0
+offset_bottom = -16.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer" unique_id=1849188296]
+layout_mode = 2
+theme = ExtResource("1_pqo0r")
+
+[node name="Title" type="Label" parent="ScrollContainer/VBoxContainer" unique_id=283589588]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "How to do your Job            "
+
+[node name="Author" type="Label" parent="ScrollContainer/VBoxContainer" unique_id=526784438]
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = "By Your Boss"
+
+[node name="CookieMangoDisplay1" type="Label" parent="ScrollContainer/VBoxContainer" unique_id=962524655]
+layout_mode = 2
+text = "
+
+
+"
+
+[node name="Mango" type="Sprite2D" parent="ScrollContainer/VBoxContainer/CookieMangoDisplay1" unique_id=1987025115]
+position = Vector2(44, 49)
+texture = ExtResource("3_tm6ed")
+
+[node name="Cookie" type="Sprite2D" parent="ScrollContainer/VBoxContainer/CookieMangoDisplay1" unique_id=686852942]
+position = Vector2(122, 54)
+texture = ExtResource("4_c0w7x")
+
+[node name="Para1" type="RichTextLabel" parent="ScrollContainer/VBoxContainer" unique_id=1081567245]
+layout_mode = 2
+theme = ExtResource("1_pqo0r")
+theme_override_fonts/bold_font = ExtResource("5_c0w7x")
+bbcode_enabled = true
+text = "We take our work here at Mango-Cookie incorperated [color=red][u]very[/u][/color] seriously. We are the top mango and cookie firm in the world as of last year. Without us, the world would struggle to deal with all its mangos and cookies. Because of that, this document is intended to help [color=royalblue][u]you[/u][/color] be a part of [color=royalblue][u]us[/u][/color], so that [color=green][u]we[/u][/color] can deal with all those mangos and cookies.
+ "
+fit_content = true
+
+[node name="Para2" type="RichTextLabel" parent="ScrollContainer/VBoxContainer" unique_id=249261910]
+layout_mode = 2
+theme = ExtResource("1_pqo0r")
+theme_override_fonts/bold_font = ExtResource("5_c0w7x")
+bbcode_enabled = true
+text = "You are provided with one TriangleSoft laptop with the latest version of TriangleOS installed. This laptop should have only the nessecary programs you need to do your job. This includes [color=royalblue][u]Spreadsheet[/u][/color] and [color=royalblue][u]E-mail[/u][/color] applications, the former to deal with the mangos and cookies and the latter do send your [color=red][u]dealings[/u][/color] to [color=green][u]Me[/u][/color] when you finish.
+ "
+fit_content = true
+
+[node name="Para3" type="RichTextLabel" parent="ScrollContainer/VBoxContainer" unique_id=977445990]
+layout_mode = 2
+theme = ExtResource("1_pqo0r")
+theme_override_fonts/bold_font = ExtResource("5_c0w7x")
+bbcode_enabled = true
+text = "Each [color=red][u]dealing[/u][/color] will consist of a pair of numbers you will see within your spreadsheet. Within every single [color=red][u]dealing[/u][/color], the [color=orange][u]first number[/u][/color] represents the number of [color=orange][u]mangos[/u][/color] and the [color=brown][u]second number[/u][/color] represents the number of [color=brown][u]cookies[/u][/color]. You will need to determine how much money each [color=red][u]dealing[/u][/color] needs. There are two different cases. 
+ "
+fit_content = true
+
+[node name="Para4" type="RichTextLabel" parent="ScrollContainer/VBoxContainer" unique_id=1338009184]
+layout_mode = 2
+theme = ExtResource("1_pqo0r")
+theme_override_fonts/bold_font = ExtResource("5_c0w7x")
+bbcode_enabled = true
+text = "For Case One [color=red][u]dealings[/u][/color], there will never be more be more [color=brown][u]cookies[/u][/color] than [color=orange][u]mangos[/u][/color]. The amount of money needed is the difference between the number of mangos and cookies, times 3.25. For example:
+"
+fit_content = true
+
+[node name="CookieMangoDisplay2" type="Label" parent="ScrollContainer/VBoxContainer" unique_id=1574490306]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "
+                = $6.50
+"
+
+[node name="Mango1" type="Sprite2D" parent="ScrollContainer/VBoxContainer/CookieMangoDisplay2" unique_id=939209386]
+position = Vector2(75, 102)
+scale = Vector2(0.578125, 0.578125)
+texture = ExtResource("3_tm6ed")
+
+[node name="Mango2" type="Sprite2D" parent="ScrollContainer/VBoxContainer/CookieMangoDisplay2" unique_id=311062680]
+position = Vector2(29, 19)
+scale = Vector2(0.578125, 0.578125)
+texture = ExtResource("3_tm6ed")
+
+[node name="Mango3" type="Sprite2D" parent="ScrollContainer/VBoxContainer/CookieMangoDisplay2" unique_id=1195145233]
+position = Vector2(72, 50)
+scale = Vector2(0.578125, 0.578125)
+texture = ExtResource("3_tm6ed")
+
+[node name="Mango4" type="Sprite2D" parent="ScrollContainer/VBoxContainer/CookieMangoDisplay2" unique_id=2068579320]
+position = Vector2(31, 73)
+scale = Vector2(0.578125, 0.578125)
+texture = ExtResource("3_tm6ed")
+
+[node name="Cookie1" type="Sprite2D" parent="ScrollContainer/VBoxContainer/CookieMangoDisplay2" unique_id=786956853]
+position = Vector2(153, 90)
+scale = Vector2(0.6875, 0.6875)
+texture = ExtResource("4_c0w7x")
+
+[node name="Cookie2" type="Sprite2D" parent="ScrollContainer/VBoxContainer/CookieMangoDisplay2" unique_id=1104138660]
+position = Vector2(178, 42.000004)
+scale = Vector2(0.625, 0.625)
+texture = ExtResource("4_c0w7x")
+
+[node name="Para5" type="RichTextLabel" parent="ScrollContainer/VBoxContainer" unique_id=2075581388]
+layout_mode = 2
+theme = ExtResource("1_pqo0r")
+theme_override_fonts/bold_font = ExtResource("5_c0w7x")
+bbcode_enabled = true
+text = "In the spreadsheet, this [color=red][u]dealing[/u][/color] would be represented as \"4, 2\". There are four [color=orange][u]mangos[/u][/color] and two [color=brown][u]cookies[/u][/color] here. Since 4 - 2 = 2, and 2 * 3.25 = 6.50, this [color=red][u]dealing[/u][/color] needs $6.50. 
+ "
+fit_content = true
+
+[node name="Para6" type="RichTextLabel" parent="ScrollContainer/VBoxContainer" unique_id=854945359]
+layout_mode = 2
+theme = ExtResource("1_pqo0r")
+theme_override_fonts/bold_font = ExtResource("5_c0w7x")
+bbcode_enabled = true
+text = "In Case Two [color=red][u]dealings[/u][/color], there will never be more be more [color=orange][u]mangos[/u][/color] than [color=brown][u]cookies[/u][/color]. The amount of money needed is the number of [color=orange][u]mangos[/u][/color] times the number of [color=brown][u]cookies[/u][/color], minus 9. For example:
+"
+fit_content = true
+
+[node name="CookieMangoDisplay3" type="Label" parent="ScrollContainer/VBoxContainer" unique_id=1174396616]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "
+                = $15.00
+"
+
+[node name="Mango1" type="Sprite2D" parent="ScrollContainer/VBoxContainer/CookieMangoDisplay3" unique_id=60420878]
+position = Vector2(21, 72)
+scale = Vector2(0.578125, 0.578125)
+texture = ExtResource("3_tm6ed")
+
+[node name="Mango2" type="Sprite2D" parent="ScrollContainer/VBoxContainer/CookieMangoDisplay3" unique_id=1490633671]
+position = Vector2(29, 19)
+scale = Vector2(0.578125, 0.578125)
+texture = ExtResource("3_tm6ed")
+
+[node name="Mango3" type="Sprite2D" parent="ScrollContainer/VBoxContainer/CookieMangoDisplay3" unique_id=989773017]
+position = Vector2(63, 55)
+scale = Vector2(0.578125, 0.578125)
+texture = ExtResource("3_tm6ed")
+
+[node name="Mango4" type="Sprite2D" parent="ScrollContainer/VBoxContainer/CookieMangoDisplay3" unique_id=97759783]
+position = Vector2(52, 108)
+scale = Vector2(0.578125, 0.578125)
+texture = ExtResource("3_tm6ed")
+
+[node name="Cookie1" type="Sprite2D" parent="ScrollContainer/VBoxContainer/CookieMangoDisplay3" unique_id=1427673030]
+position = Vector2(131, 74)
+scale = Vector2(0.546875, 0.546875)
+texture = ExtResource("4_c0w7x")
+
+[node name="Cookie2" type="Sprite2D" parent="ScrollContainer/VBoxContainer/CookieMangoDisplay3" unique_id=1073153967]
+position = Vector2(160, 21.000015)
+scale = Vector2(0.50000024, 0.50000024)
+texture = ExtResource("4_c0w7x")
+
+[node name="Cookie3" type="Sprite2D" parent="ScrollContainer/VBoxContainer/CookieMangoDisplay3" unique_id=914583330]
+position = Vector2(94.99999, 103)
+scale = Vector2(0.625, 0.625)
+texture = ExtResource("4_c0w7x")
+
+[node name="Cookie4" type="Sprite2D" parent="ScrollContainer/VBoxContainer/CookieMangoDisplay3" unique_id=1377571542]
+position = Vector2(120.00001, 34.000004)
+scale = Vector2(0.625, 0.625)
+texture = ExtResource("4_c0w7x")
+
+[node name="Cookie5" type="Sprite2D" parent="ScrollContainer/VBoxContainer/CookieMangoDisplay3" unique_id=271085221]
+position = Vector2(175, 60)
+scale = Vector2(0.625, 0.625)
+texture = ExtResource("4_c0w7x")
+
+[node name="Cookie6" type="Sprite2D" parent="ScrollContainer/VBoxContainer/CookieMangoDisplay3" unique_id=1355789300]
+position = Vector2(161.00002, 103)
+scale = Vector2(0.625, 0.625)
+texture = ExtResource("4_c0w7x")
+
+[node name="Para7" type="RichTextLabel" parent="ScrollContainer/VBoxContainer" unique_id=391424830]
+layout_mode = 2
+theme = ExtResource("1_pqo0r")
+theme_override_fonts/bold_font = ExtResource("5_c0w7x")
+bbcode_enabled = true
+text = "In the spreadsheet, this [color=red][u]dealing[/u][/color] would be represented as \"4, 6\". There are four [color=orange][u]mangos[/u][/color] and two [color=brown][u]cookies[/u][/color] here. Since 4 * 6 = 24, and 24 - 9 = 15, this [color=red][u]dealing[/u][/color] needs $15.00.
+ "
+fit_content = true
+
+[node name="Para8" type="RichTextLabel" parent="ScrollContainer/VBoxContainer" unique_id=2121854591]
+layout_mode = 2
+theme = ExtResource("1_pqo0r")
+theme_override_fonts/bold_font = ExtResource("5_c0w7x")
+bbcode_enabled = true
+text = "You will never get a number below zero. If your number would be below zero, this is not a Case Two [color=red][u]dealing[/u][/color].
+  "
+fit_content = true
+
+[node name="Para9" type="RichTextLabel" parent="ScrollContainer/VBoxContainer" unique_id=576683093]
+layout_mode = 2
+theme = ExtResource("1_pqo0r")
+theme_override_fonts/bold_font = ExtResource("5_c0w7x")
+bbcode_enabled = true
+text = "This is all you need to know do deal with mangos and cookies. Good luck, respected employee. Don't let me down.
+"
+fit_content = true
+
+[connection signal="close_requested" from="." to="." method="_on_close_requested"]

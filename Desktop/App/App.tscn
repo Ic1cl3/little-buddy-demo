@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://cu4551b581y8a"]
+
+[ext_resource type="Script" uid="uid://hpf2kvtdcvu6" path="res://Desktop/App/App.gd" id="1_scc8p"]
+[ext_resource type="Theme" uid="uid://b5xp13uwnqjpc" path="res://Theme.tres" id="2_s8eg6"]
+
+[sub_resource type="Gradient" id="Gradient_s8eg6"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_uavcp"]
+gradient = SubResource("Gradient_s8eg6")
+width = 50
+height = 35
+
+[node name="App" type="Node2D" unique_id=607370543]
+script = ExtResource("1_scc8p")
+titleString = "jdedehjh"
+iconImage = SubResource("GradientTexture2D_uavcp")
+windowPath = "res://Desktop/ConfirmClose/ConfirmClose.tscn"
+
+[node name="@Label@27517" type="Label" parent="." unique_id=364873801]
+offset_left = -192.5
+offset_top = 17.0
+offset_right = 192.5
+offset_bottom = 39.0
+theme = ExtResource("2_s8eg6")
+text = "jdedehjh"
+horizontal_alignment = 1
+
+[node name="@Sprite2D@34214" type="Sprite2D" parent="." unique_id=768302366]
+texture = SubResource("GradientTexture2D_uavcp")
+
+[node name="@ColorRect@65920" type="ColorRect" parent="." unique_id=371683414]
+offset_left = -35.0
+offset_top = -22.0
+offset_right = 35.0
+offset_bottom = 39.0
+color = Color(1, 1, 1, 0)
