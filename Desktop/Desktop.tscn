@@ -135,6 +135,25 @@ offset_right = 42.0
 offset_bottom = 53.0
 color = Color(1, 1, 1, 0)
 
+[node name="@Sprite2D@21895" type="Sprite2D" parent="Cookie" unique_id=1914792019]
+texture = ExtResource("6_kqoml")
+
+[node name="@Label@21896" type="Label" parent="Cookie" unique_id=376706896]
+offset_left = -28.0
+offset_top = 36.0
+offset_right = 28.0
+offset_bottom = 58.0
+theme = ExtResource("2_5h8ho")
+text = "Cookie"
+horizontal_alignment = 1
+
+[node name="@ColorRect@21897" type="ColorRect" parent="Cookie" unique_id=1613964448]
+offset_left = -42.0
+offset_top = -37.0
+offset_right = 42.0
+offset_bottom = 53.0
+color = Color(1, 1, 1, 0)
+
 [node name="Pong" type="Node2D" parent="." unique_id=1259268614]
 position = Vector2(190, 70)
 script = ExtResource("6_wf8r5")
@@ -156,6 +175,25 @@ text = "Pong"
 horizontal_alignment = 1
 
 [node name="@ColorRect@724941" type="ColorRect" parent="Pong" unique_id=302220726]
+offset_left = -42.0
+offset_top = -37.0
+offset_right = 42.0
+offset_bottom = 53.0
+color = Color(1, 1, 1, 0)
+
+[node name="@Sprite2D@21898" type="Sprite2D" parent="Pong" unique_id=602969731]
+texture = ExtResource("8_pum5o")
+
+[node name="@Label@21899" type="Label" parent="Pong" unique_id=888481789]
+offset_left = -20.5
+offset_top = 36.0
+offset_right = 20.5
+offset_bottom = 58.0
+theme = ExtResource("2_5h8ho")
+text = "Pong"
+horizontal_alignment = 1
+
+[node name="@ColorRect@21900" type="ColorRect" parent="Pong" unique_id=356962269]
 offset_left = -42.0
 offset_top = -37.0
 offset_right = 42.0
@@ -189,6 +227,25 @@ offset_right = 42.0
 offset_bottom = 53.0
 color = Color(1, 1, 1, 0)
 
+[node name="@Sprite2D@21901" type="Sprite2D" parent="Calculator" unique_id=2025406085]
+texture = ExtResource("8_vfxqx")
+
+[node name="@Label@21902" type="Label" parent="Calculator" unique_id=159686562]
+offset_left = -43.0
+offset_top = 36.0
+offset_right = 43.0
+offset_bottom = 58.0
+theme = ExtResource("2_5h8ho")
+text = "Calculator"
+horizontal_alignment = 1
+
+[node name="@ColorRect@21903" type="ColorRect" parent="Calculator" unique_id=149180037]
+offset_left = -42.0
+offset_top = -37.0
+offset_right = 42.0
+offset_bottom = 53.0
+color = Color(1, 1, 1, 0)
+
 [node name="Spreadsheet" type="Node2D" parent="." unique_id=1434704332]
 position = Vector2(430, 70)
 script = ExtResource("6_wf8r5")
@@ -210,6 +267,25 @@ text = "Spreadsheet"
 horizontal_alignment = 1
 
 [node name="@ColorRect@724947" type="ColorRect" parent="Spreadsheet" unique_id=2055204619]
+offset_left = -42.0
+offset_top = -37.0
+offset_right = 42.0
+offset_bottom = 53.0
+color = Color(1, 1, 1, 0)
+
+[node name="@Sprite2D@21904" type="Sprite2D" parent="Spreadsheet" unique_id=1125212205]
+texture = ExtResource("9_vfxqx")
+
+[node name="@Label@21905" type="Label" parent="Spreadsheet" unique_id=1819809897]
+offset_left = -50.5
+offset_top = 36.0
+offset_right = 50.5
+offset_bottom = 58.0
+theme = ExtResource("2_5h8ho")
+text = "Spreadsheet"
+horizontal_alignment = 1
+
+[node name="@ColorRect@21906" type="ColorRect" parent="Spreadsheet" unique_id=538507402]
 offset_left = -42.0
 offset_top = -37.0
 offset_right = 42.0
@@ -243,6 +319,25 @@ offset_right = 42.0
 offset_bottom = 53.0
 color = Color(1, 1, 1, 0)
 
+[node name="@Sprite2D@21907" type="Sprite2D" parent="Email" unique_id=315740793]
+texture = ExtResource("10_gsv74")
+
+[node name="@Label@21908" type="Label" parent="Email" unique_id=755443743]
+offset_left = -25.5
+offset_top = 36.0
+offset_right = 25.5
+offset_bottom = 58.0
+theme = ExtResource("2_5h8ho")
+text = "E-Mail"
+horizontal_alignment = 1
+
+[node name="@ColorRect@21909" type="ColorRect" parent="Email" unique_id=1360940212]
+offset_left = -42.0
+offset_top = -37.0
+offset_right = 42.0
+offset_bottom = 53.0
+color = Color(1, 1, 1, 0)
+
 [node name="InfoDoc" type="Node2D" parent="." unique_id=240008568]
 position = Vector2(670, 70)
 script = ExtResource("6_wf8r5")
@@ -264,6 +359,25 @@ text = "Info.txt"
 horizontal_alignment = 1
 
 [node name="@ColorRect@724953" type="ColorRect" parent="InfoDoc" unique_id=816802469]
+offset_left = -42.0
+offset_top = -37.0
+offset_right = 42.0
+offset_bottom = 53.0
+color = Color(1, 1, 1, 0)
+
+[node name="@Sprite2D@21910" type="Sprite2D" parent="InfoDoc" unique_id=393367616]
+texture = ExtResource("10_crrsb")
+
+[node name="@Label@21911" type="Label" parent="InfoDoc" unique_id=1028911282]
+offset_left = -28.0
+offset_top = 36.0
+offset_right = 28.0
+offset_bottom = 58.0
+theme = ExtResource("2_5h8ho")
+text = "Info.txt"
+horizontal_alignment = 1
+
+[node name="@ColorRect@21912" type="ColorRect" parent="InfoDoc" unique_id=272181623]
 offset_left = -42.0
 offset_top = -37.0
 offset_right = 42.0
