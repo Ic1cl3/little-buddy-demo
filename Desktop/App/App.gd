@@ -21,19 +21,35 @@ func _process(delta: float) -> void:
 	if time < 0.1: return
 	# Handle icon node existance.
 	if icon == null and iconImage != null:
-		icon = Sprite2D.new()
-		add_child(icon)
-		icon.owner = get_tree().edited_scene_root
+		if get_child_count() < 3:
+			icon = Sprite2D.new()
+			add_child(icon)
+			icon.owner = get_tree().edited_scene_root
+		else:
+			for child in get_children():
+				if child is Sprite2D:
+					if icon != null:
+						child.queue_free()
+						break
+					icon = child
 	elif icon != null and iconImage == null:
 		icon.queue_free()
 	elif icon != null and iconImage != null:
 		icon.texture = iconImage
 	# Handle label node existance.
 	if title == null:
-		title = Label.new()
-		title.theme = load("res://Theme.tres")
-		add_child(title)
-		title.owner = get_tree().edited_scene_root
+		if get_child_count() < 3:
+			title = Label.new()
+			title.theme = load("res://Theme.tres")
+			add_child(title)
+			title.owner = get_tree().edited_scene_root
+		else:
+			for child in get_children():
+				if child is Label:
+					if title != null:
+						child.queue_free()
+						break
+					title = child
 	else:
 		title.text = titleString
 		title.position.x = -title.size.x/2
@@ -43,10 +59,18 @@ func _process(delta: float) -> void:
 		title.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	# Handle the focus grabber.
 	if focusGrabber == null:
-		focusGrabber = ColorRect.new()
-		focusGrabber.color = Color.TRANSPARENT
-		add_child(focusGrabber)
-		focusGrabber.owner = get_tree().edited_scene_root
+		if get_child_count() < 3:
+			focusGrabber = ColorRect.new()
+			focusGrabber.color = Color.TRANSPARENT
+			add_child(focusGrabber)
+			focusGrabber.owner = get_tree().edited_scene_root
+		else:
+			for child in get_children():
+				if child is ColorRect:
+					if focusGrabber != null:
+						child.queue_free()
+						break
+					focusGrabber = child
 	else:
 		if iconImage != null:
 			focusGrabber.size = Vector2(iconImage.get_width() + 20, iconImage.get_height() + 26)

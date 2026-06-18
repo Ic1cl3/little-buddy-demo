@@ -116,10 +116,10 @@ iconImage = ExtResource("6_kqoml")
 windowPath = "res://Desktop/Cookie/Cookie.tscn"
 metadata/_custom_type_script = "uid://hpf2kvtdcvu6"
 
-[node name="@Sprite2D@724936" type="Sprite2D" parent="Cookie" unique_id=497233225]
+[node name="@Sprite2D@39979" type="Sprite2D" parent="Cookie" unique_id=1182782741]
 texture = ExtResource("6_kqoml")
 
-[node name="@Label@724937" type="Label" parent="Cookie" unique_id=1231294126]
+[node name="@Label@39980" type="Label" parent="Cookie" unique_id=385958788]
 offset_left = -28.0
 offset_top = 36.0
 offset_right = 28.0
@@ -128,26 +128,7 @@ theme = ExtResource("2_5h8ho")
 text = "Cookie"
 horizontal_alignment = 1
 
-[node name="@ColorRect@724938" type="ColorRect" parent="Cookie" unique_id=16933730]
-offset_left = -42.0
-offset_top = -37.0
-offset_right = 42.0
-offset_bottom = 53.0
-color = Color(1, 1, 1, 0)
-
-[node name="@Sprite2D@21895" type="Sprite2D" parent="Cookie" unique_id=1914792019]
-texture = ExtResource("6_kqoml")
-
-[node name="@Label@21896" type="Label" parent="Cookie" unique_id=376706896]
-offset_left = -28.0
-offset_top = 36.0
-offset_right = 28.0
-offset_bottom = 58.0
-theme = ExtResource("2_5h8ho")
-text = "Cookie"
-horizontal_alignment = 1
-
-[node name="@ColorRect@21897" type="ColorRect" parent="Cookie" unique_id=1613964448]
+[node name="@ColorRect@39981" type="ColorRect" parent="Cookie" unique_id=429615557]
 offset_left = -42.0
 offset_top = -37.0
 offset_right = 42.0
@@ -162,10 +143,10 @@ iconImage = ExtResource("8_pum5o")
 windowPath = "res://Desktop/Pong/Pong.tscn"
 metadata/_custom_type_script = "uid://hpf2kvtdcvu6"
 
-[node name="@Sprite2D@724939" type="Sprite2D" parent="Pong" unique_id=76796060]
+[node name="@Sprite2D@39982" type="Sprite2D" parent="Pong" unique_id=1856271256]
 texture = ExtResource("8_pum5o")
 
-[node name="@Label@724940" type="Label" parent="Pong" unique_id=1935619173]
+[node name="@Label@39983" type="Label" parent="Pong" unique_id=1873721724]
 offset_left = -20.5
 offset_top = 36.0
 offset_right = 20.5
@@ -174,26 +155,7 @@ theme = ExtResource("2_5h8ho")
 text = "Pong"
 horizontal_alignment = 1
 
-[node name="@ColorRect@724941" type="ColorRect" parent="Pong" unique_id=302220726]
-offset_left = -42.0
-offset_top = -37.0
-offset_right = 42.0
-offset_bottom = 53.0
-color = Color(1, 1, 1, 0)
-
-[node name="@Sprite2D@21898" type="Sprite2D" parent="Pong" unique_id=602969731]
-texture = ExtResource("8_pum5o")
-
-[node name="@Label@21899" type="Label" parent="Pong" unique_id=888481789]
-offset_left = -20.5
-offset_top = 36.0
-offset_right = 20.5
-offset_bottom = 58.0
-theme = ExtResource("2_5h8ho")
-text = "Pong"
-horizontal_alignment = 1
-
-[node name="@ColorRect@21900" type="ColorRect" parent="Pong" unique_id=356962269]
+[node name="@ColorRect@39984" type="ColorRect" parent="Pong" unique_id=1151587703]
 offset_left = -42.0
 offset_top = -37.0
 offset_right = 42.0
@@ -208,10 +170,10 @@ iconImage = ExtResource("8_vfxqx")
 windowPath = "res://Desktop/Calculator/Calculator.tscn"
 metadata/_custom_type_script = "uid://hpf2kvtdcvu6"
 
-[node name="@Sprite2D@724942" type="Sprite2D" parent="Calculator" unique_id=944632177]
+[node name="@Sprite2D@39985" type="Sprite2D" parent="Calculator" unique_id=615794765]
 texture = ExtResource("8_vfxqx")
 
-[node name="@Label@724943" type="Label" parent="Calculator" unique_id=747665220]
+[node name="@Label@39986" type="Label" parent="Calculator" unique_id=956709528]
 offset_left = -43.0
 offset_top = 36.0
 offset_right = 43.0
@@ -220,26 +182,7 @@ theme = ExtResource("2_5h8ho")
 text = "Calculator"
 horizontal_alignment = 1
 
-[node name="@ColorRect@724944" type="ColorRect" parent="Calculator" unique_id=1634945452]
-offset_left = -42.0
-offset_top = -37.0
-offset_right = 42.0
-offset_bottom = 53.0
-color = Color(1, 1, 1, 0)
-
-[node name="@Sprite2D@21901" type="Sprite2D" parent="Calculator" unique_id=2025406085]
-texture = ExtResource("8_vfxqx")
-
-[node name="@Label@21902" type="Label" parent="Calculator" unique_id=159686562]
-offset_left = -43.0
-offset_top = 36.0
-offset_right = 43.0
-offset_bottom = 58.0
-theme = ExtResource("2_5h8ho")
-text = "Calculator"
-horizontal_alignment = 1
-
-[node name="@ColorRect@21903" type="ColorRect" parent="Calculator" unique_id=149180037]
+[node name="@ColorRect@39987" type="ColorRect" parent="Calculator" unique_id=1253369068]
 offset_left = -42.0
 offset_top = -37.0
 offset_right = 42.0
@@ -254,10 +197,10 @@ iconImage = ExtResource("9_vfxqx")
 windowPath = "res://Desktop/Spreadsheet/Spreadsheet.tscn"
 metadata/_custom_type_script = "uid://hpf2kvtdcvu6"
 
-[node name="@Sprite2D@724945" type="Sprite2D" parent="Spreadsheet" unique_id=1420429066]
+[node name="@Sprite2D@39988" type="Sprite2D" parent="Spreadsheet" unique_id=1669058207]
 texture = ExtResource("9_vfxqx")
 
-[node name="@Label@724946" type="Label" parent="Spreadsheet" unique_id=1649695517]
+[node name="@Label@39989" type="Label" parent="Spreadsheet" unique_id=67954824]
 offset_left = -50.5
 offset_top = 36.0
 offset_right = 50.5
@@ -266,26 +209,7 @@ theme = ExtResource("2_5h8ho")
 text = "Spreadsheet"
 horizontal_alignment = 1
 
-[node name="@ColorRect@724947" type="ColorRect" parent="Spreadsheet" unique_id=2055204619]
-offset_left = -42.0
-offset_top = -37.0
-offset_right = 42.0
-offset_bottom = 53.0
-color = Color(1, 1, 1, 0)
-
-[node name="@Sprite2D@21904" type="Sprite2D" parent="Spreadsheet" unique_id=1125212205]
-texture = ExtResource("9_vfxqx")
-
-[node name="@Label@21905" type="Label" parent="Spreadsheet" unique_id=1819809897]
-offset_left = -50.5
-offset_top = 36.0
-offset_right = 50.5
-offset_bottom = 58.0
-theme = ExtResource("2_5h8ho")
-text = "Spreadsheet"
-horizontal_alignment = 1
-
-[node name="@ColorRect@21906" type="ColorRect" parent="Spreadsheet" unique_id=538507402]
+[node name="@ColorRect@39990" type="ColorRect" parent="Spreadsheet" unique_id=1093835941]
 offset_left = -42.0
 offset_top = -37.0
 offset_right = 42.0
@@ -300,10 +224,10 @@ iconImage = ExtResource("10_gsv74")
 windowPath = "res://Desktop/Email/Email.tscn"
 metadata/_custom_type_script = "uid://hpf2kvtdcvu6"
 
-[node name="@Sprite2D@724948" type="Sprite2D" parent="Email" unique_id=1659092241]
+[node name="@Sprite2D@39991" type="Sprite2D" parent="Email" unique_id=1800614755]
 texture = ExtResource("10_gsv74")
 
-[node name="@Label@724949" type="Label" parent="Email" unique_id=314232737]
+[node name="@Label@39992" type="Label" parent="Email" unique_id=1972837971]
 offset_left = -25.5
 offset_top = 36.0
 offset_right = 25.5
@@ -312,26 +236,7 @@ theme = ExtResource("2_5h8ho")
 text = "E-Mail"
 horizontal_alignment = 1
 
-[node name="@ColorRect@724950" type="ColorRect" parent="Email" unique_id=208327379]
-offset_left = -42.0
-offset_top = -37.0
-offset_right = 42.0
-offset_bottom = 53.0
-color = Color(1, 1, 1, 0)
-
-[node name="@Sprite2D@21907" type="Sprite2D" parent="Email" unique_id=315740793]
-texture = ExtResource("10_gsv74")
-
-[node name="@Label@21908" type="Label" parent="Email" unique_id=755443743]
-offset_left = -25.5
-offset_top = 36.0
-offset_right = 25.5
-offset_bottom = 58.0
-theme = ExtResource("2_5h8ho")
-text = "E-Mail"
-horizontal_alignment = 1
-
-[node name="@ColorRect@21909" type="ColorRect" parent="Email" unique_id=1360940212]
+[node name="@ColorRect@39993" type="ColorRect" parent="Email" unique_id=2004135991]
 offset_left = -42.0
 offset_top = -37.0
 offset_right = 42.0
@@ -346,10 +251,10 @@ iconImage = ExtResource("10_crrsb")
 windowPath = "res://Desktop/InfoDoc/InfoDoc.tscn"
 metadata/_custom_type_script = "uid://hpf2kvtdcvu6"
 
-[node name="@Sprite2D@724951" type="Sprite2D" parent="InfoDoc" unique_id=870750845]
+[node name="@Sprite2D@39994" type="Sprite2D" parent="InfoDoc" unique_id=891163080]
 texture = ExtResource("10_crrsb")
 
-[node name="@Label@724952" type="Label" parent="InfoDoc" unique_id=1908259919]
+[node name="@Label@39995" type="Label" parent="InfoDoc" unique_id=3293382]
 offset_left = -28.0
 offset_top = 36.0
 offset_right = 28.0
@@ -358,26 +263,7 @@ theme = ExtResource("2_5h8ho")
 text = "Info.txt"
 horizontal_alignment = 1
 
-[node name="@ColorRect@724953" type="ColorRect" parent="InfoDoc" unique_id=816802469]
-offset_left = -42.0
-offset_top = -37.0
-offset_right = 42.0
-offset_bottom = 53.0
-color = Color(1, 1, 1, 0)
-
-[node name="@Sprite2D@21910" type="Sprite2D" parent="InfoDoc" unique_id=393367616]
-texture = ExtResource("10_crrsb")
-
-[node name="@Label@21911" type="Label" parent="InfoDoc" unique_id=1028911282]
-offset_left = -28.0
-offset_top = 36.0
-offset_right = 28.0
-offset_bottom = 58.0
-theme = ExtResource("2_5h8ho")
-text = "Info.txt"
-horizontal_alignment = 1
-
-[node name="@ColorRect@21912" type="ColorRect" parent="InfoDoc" unique_id=272181623]
+[node name="@ColorRect@39996" type="ColorRect" parent="InfoDoc" unique_id=5580377]
 offset_left = -42.0
 offset_top = -37.0
 offset_right = 42.0
