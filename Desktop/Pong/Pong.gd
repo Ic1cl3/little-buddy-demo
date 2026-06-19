@@ -14,10 +14,13 @@ var rightscore = 0
 
 
 func _ready() -> void:
+	Master.openWindows["pong"] += 1
 	resetBall()
 
 
 func _physics_process(_delta: float) -> void:
+	if Master.primaryWindows["pong"] == null:
+		Master.primaryWindows["pong"] = self
 	ball.velocity = ball.velocity.normalized() * 400
 	ball.move_and_slide()
 	leftPaddle.position.y = get_mouse_position().y
@@ -41,6 +44,7 @@ func resetBall() -> void:
 
 
 func _on_close_requested() -> void:
+	Master.openWindows["pong"] -= 1
 	queue_free()
 
 

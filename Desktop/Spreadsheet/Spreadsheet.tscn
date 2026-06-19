@@ -191,110 +191,146 @@ columns = 3
 
 [node name="CellPair1" parent="Sheet" unique_id=1127092677 instance=ExtResource("2_egwvx")]
 layout_mode = 2
+LeftVal = "4, 2"
 
 [node name="CellPair2" parent="Sheet" unique_id=393322977 instance=ExtResource("2_egwvx")]
 layout_mode = 2
+LeftVal = "3, 4"
 
 [node name="CellPair3" parent="Sheet" unique_id=1465634731 instance=ExtResource("2_egwvx")]
 layout_mode = 2
+LeftVal = "5, 3"
 
 [node name="CellPair4" parent="Sheet" unique_id=1832134687 instance=ExtResource("2_egwvx")]
 layout_mode = 2
+LeftVal = "5, 5"
 
 [node name="CellPair5" parent="Sheet" unique_id=1775343961 instance=ExtResource("2_egwvx")]
 layout_mode = 2
+LeftVal = "2, 8"
 
 [node name="CellPair6" parent="Sheet" unique_id=209021005 instance=ExtResource("2_egwvx")]
 layout_mode = 2
+LeftVal = "3, 5"
 
 [node name="CellPair7" parent="Sheet" unique_id=528574939 instance=ExtResource("2_egwvx")]
 layout_mode = 2
+LeftVal = "6, 5"
 
 [node name="CellPair8" parent="Sheet" unique_id=1450399956 instance=ExtResource("2_egwvx")]
 layout_mode = 2
+LeftVal = "1, 13"
 
 [node name="CellPair9" parent="Sheet" unique_id=241484984 instance=ExtResource("2_egwvx")]
 layout_mode = 2
+LeftVal = "2, 13"
 
 [node name="CellPair10" parent="Sheet" unique_id=1816488053 instance=ExtResource("2_egwvx")]
 layout_mode = 2
+LeftVal = "5, 1"
 
 [node name="CellPair11" parent="Sheet" unique_id=1023347817 instance=ExtResource("2_egwvx")]
 layout_mode = 2
+LeftVal = "4, 4"
 
 [node name="CellPair12" parent="Sheet" unique_id=1728849722 instance=ExtResource("2_egwvx")]
 layout_mode = 2
+LeftVal = "5, 4"
 
 [node name="CellPair13" parent="Sheet" unique_id=1645025272 instance=ExtResource("2_egwvx")]
 layout_mode = 2
+LeftVal = "8, 3"
 
 [node name="CellPair14" parent="Sheet" unique_id=1570510860 instance=ExtResource("2_egwvx")]
 layout_mode = 2
+LeftVal = "3, 8"
 
 [node name="CellPair15" parent="Sheet" unique_id=1902172496 instance=ExtResource("2_egwvx")]
 layout_mode = 2
+LeftVal = "4, 7"
 
 [node name="CellPair16" parent="Sheet" unique_id=2006907988 instance=ExtResource("2_egwvx")]
 layout_mode = 2
+LeftVal = "7, 5"
 
 [node name="CellPair17" parent="Sheet" unique_id=398899148 instance=ExtResource("2_egwvx")]
 layout_mode = 2
+LeftVal = "3, 3"
 
 [node name="CellPair18" parent="Sheet" unique_id=514509205 instance=ExtResource("2_egwvx")]
 layout_mode = 2
+LeftVal = "7, 4"
 
 [node name="CellPair19" parent="Sheet" unique_id=912672679 instance=ExtResource("2_egwvx")]
 layout_mode = 2
+LeftVal = "9, 4"
 
 [node name="CellPair20" parent="Sheet" unique_id=1479123185 instance=ExtResource("2_egwvx")]
 layout_mode = 2
+LeftVal = "10, 11"
 
 [node name="CellPair21" parent="Sheet" unique_id=1675265728 instance=ExtResource("2_egwvx")]
 layout_mode = 2
+LeftVal = "2, 2"
 
 [node name="CellPair22" parent="Sheet" unique_id=1172831334 instance=ExtResource("2_egwvx")]
 layout_mode = 2
+LeftVal = "3, 1"
 
 [node name="CellPair23" parent="Sheet" unique_id=363255157 instance=ExtResource("2_egwvx")]
 layout_mode = 2
+LeftVal = "2, 9"
 
 [node name="CellPair24" parent="Sheet" unique_id=1234140184 instance=ExtResource("2_egwvx")]
 layout_mode = 2
+LeftVal = "2, 10"
 
 [node name="CellPair25" parent="Sheet" unique_id=1083263457 instance=ExtResource("2_egwvx")]
 layout_mode = 2
+LeftVal = "100, 88"
 
 [node name="CellPair26" parent="Sheet" unique_id=2093101206 instance=ExtResource("2_egwvx")]
 layout_mode = 2
+LeftVal = "7, 8"
 
 [node name="CellPair27" parent="Sheet" unique_id=346447138 instance=ExtResource("2_egwvx")]
 layout_mode = 2
+LeftVal = "9, 2"
 
 [node name="CellPair28" parent="Sheet" unique_id=1442840869 instance=ExtResource("2_egwvx")]
 layout_mode = 2
+LeftVal = "9, 1"
 
 [node name="CellPair29" parent="Sheet" unique_id=1870317866 instance=ExtResource("2_egwvx")]
 layout_mode = 2
+LeftVal = "3, 12"
 
 [node name="CellPair30" parent="Sheet" unique_id=841122094 instance=ExtResource("2_egwvx")]
 layout_mode = 2
+LeftVal = "2, 4"
 
 [node name="CellPair31" parent="Sheet" unique_id=1902622658 instance=ExtResource("2_egwvx")]
 layout_mode = 2
+LeftVal = "9, 0"
 
 [node name="CellPair32" parent="Sheet" unique_id=1072464769 instance=ExtResource("2_egwvx")]
 layout_mode = 2
+LeftVal = "5, 10"
 
 [node name="CellPair33" parent="Sheet" unique_id=676003850 instance=ExtResource("2_egwvx")]
 layout_mode = 2
+LeftVal = "4, 10"
 
 [node name="CellPair34" parent="Sheet" unique_id=561409635 instance=ExtResource("2_egwvx")]
 layout_mode = 2
+LeftVal = "2, 1"
 
 [node name="CellPair35" parent="Sheet" unique_id=2139057547 instance=ExtResource("2_egwvx")]
 layout_mode = 2
+LeftVal = "1, 9"
 
 [node name="CellPair36" parent="Sheet" unique_id=1029326128 instance=ExtResource("2_egwvx")]
 layout_mode = 2
+LeftVal = "13, 7"
 
 [connection signal="close_requested" from="." to="." method="_on_close_requested"]

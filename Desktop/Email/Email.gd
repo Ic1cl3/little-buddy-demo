@@ -16,11 +16,15 @@ var prevFrameSelected = 0
 
 
 func _ready() -> void:
+	Master.openWindows["email"] += 1
 	refreshInbox()
 	Master.emailed.connect(refreshInbox)
 
 
 func _process(_delta: float) -> void:
+	if Master.primaryWindows["email"] == null:
+		Master.primaryWindows["email"] = self
+	
 	if prevFrameSelected != toPicker.selected:
 		prevFrameSelected = toPicker.selected
 		choose.play()
@@ -59,6 +63,7 @@ func refreshInbox() -> void:
 
 
 func _on_close_requested() -> void:
+	Master.openWindows["email"] -= 1
 	queue_free()
 
 

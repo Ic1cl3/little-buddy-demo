@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="IncomingMail" format=3 uid="uid://cyaulpbv4i6ry"]
+
+[ext_resource type="Script" uid="uid://b1ilryikoynf1" path="res://Desktop/Email/IncomingMail.gd" id="1_pcwxc"]
+
+[resource]
+script = ExtResource("1_pcwxc")
+subject = "Inspirational Quote from Founder"
+text = "\"Any time you're confused because the answer seems to be nothing - neither here nor there, neither mango-strong nor cookie-strong, the answer is rabbit.\"
+ - John MangoCookie"
+metadata/_custom_type_script = "uid://b1ilryikoynf1"
