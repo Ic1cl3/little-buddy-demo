@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://dcicokx6vge12" path="res://Desktop/Spreadsheet/Icon.png" id="9_vfxqx"]
 [ext_resource type="Texture2D" uid="uid://cosjl23vhga5n" path="res://Desktop/InfoDoc/Icon.png" id="10_crrsb"]
 [ext_resource type="Texture2D" uid="uid://bbgm4kso1e8qq" path="res://Desktop/Email/Icon.png" id="10_gsv74"]
+[ext_resource type="PackedScene" uid="uid://b147jdqi3ily6" path="res://Buddy/Buddy.tscn" id="14_m3ujb"]
 
 [sub_resource type="Gradient" id="Gradient_ujh53"]
 interpolation_mode = 2
@@ -270,8 +271,13 @@ offset_right = 42.0
 offset_bottom = 53.0
 color = Color(1, 1, 1, 0)
 
+[node name="Buddy" parent="." unique_id=2106673213 instance=ExtResource("14_m3ujb")]
+z_index = 1
+position = Vector2(1435, 713)
+
 [node name="Cover" type="ColorRect" parent="." unique_id=1373664585]
 visible = false
+z_index = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
