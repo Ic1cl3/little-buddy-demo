@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://dcy6ic1jlbxcl"]
+
+[ext_resource type="Theme" uid="uid://b5xp13uwnqjpc" path="res://Theme.tres" id="1_2alhb"]
+[ext_resource type="Script" uid="uid://b0s41kouy52pf" path="res://Desktop/Email/InboxMessage.gd" id="1_y5ova"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_67kiv"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.61960787, 0.61960787, 0.61960787, 0)
+draw_center = false
+border_width_bottom = 2
+corner_detail = 5
+expand_margin_left = 8.0
+expand_margin_right = 512.0
+expand_margin_bottom = 8.0
+
+[node name="InboxMessage" type="MarginContainer" unique_id=913891879]
+anchors_preset = -1
+anchor_right = 512.0
+anchor_bottom = 40.0
+offset_bottom = 10.0
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_bottom = 8
+script = ExtResource("1_y5ova")
+from = "Boss"
+subject = "What the fuck is this data?"
+
+[node name="Parent" type="PanelContainer" parent="." unique_id=379567391]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_67kiv")
+
+[node name="Info" type="Label" parent="Parent" unique_id=814206634]
+layout_mode = 2
+theme = ExtResource("1_2alhb")
+text = "[New!] Boss - \"What the fuck is this data?\""

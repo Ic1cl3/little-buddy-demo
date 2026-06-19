@@ -5,6 +5,7 @@ extends Node
 var storyKeys : Dictionary = {
 	"pongData" : null,
 	"sheetEntries" : [],
+	"emails" : []
 }
 
 

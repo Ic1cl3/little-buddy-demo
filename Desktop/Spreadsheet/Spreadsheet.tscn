@@ -108,7 +108,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.08432398, 0.050131693, 0.13228956, 1)
+color = Color(0.2097866, 0.21819708, 0.4926017, 1)
 
 [node name="Panel" type="Panel" parent="." unique_id=1706378978]
 anchors_preset = 15

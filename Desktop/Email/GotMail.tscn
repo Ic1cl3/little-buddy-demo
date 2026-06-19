@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://cakx2ue623ccp"]
+
+[ext_resource type="Theme" uid="uid://b5xp13uwnqjpc" path="res://Theme.tres" id="1_enmfa"]
+[ext_resource type="Script" uid="uid://cknffd2e868a5" path="res://Desktop/Email/GotMail.gd" id="2_k20d1"]
+[ext_resource type="AudioStream" uid="uid://u00lyxl0vffn" path="res://Desktop/Email/GotMail.mp3" id="3_2key7"]
+
+[node name="GotMail" type="Window" unique_id=2070892790]
+oversampling_override = 1.0
+title = "Alert!"
+initial_position = 1
+size = Vector2i(256, 128)
+transient = true
+unresizable = true
+maximize_disabled = true
+theme = ExtResource("1_enmfa")
+script = ExtResource("2_k20d1")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=992507871]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="." unique_id=472288207]
+offset_left = 29.0
+offset_top = 47.0
+offset_right = 225.0
+offset_bottom = 79.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 24
+text = "You've got mail!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Jingle" type="AudioStreamPlayer" parent="." unique_id=1577290209]
+stream = ExtResource("3_2key7")
+
+[connection signal="close_requested" from="." to="." method="_on_close_requested"]

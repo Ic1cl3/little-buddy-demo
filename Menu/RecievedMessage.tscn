@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://72fphnxv3tjp"]
+
+[ext_resource type="Theme" uid="uid://b5xp13uwnqjpc" path="res://Theme.tres" id="1_n4xh8"]
+
+[node name="RecievedMessage" type="Window" unique_id=477794700]
+oversampling_override = 1.0
+title = "Message"
+initial_position = 1
+size = Vector2i(256, 256)
+transient = true
+unresizable = true
+maximize_disabled = true
+theme = ExtResource("1_n4xh8")
+
+[node name="Background" type="ColorRect" parent="." unique_id=712086964]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.07058824, 0.019607844, 0.09411765, 1)
+
+[node name="From" type="Label" parent="." unique_id=762496182]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 9.0
+offset_top = 5.0
+offset_right = -8.0
+offset_bottom = -229.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "From: Wife"
+
+[node name="Text" type="Label" parent="." unique_id=853523006]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 9.0
+offset_top = 5.0
+offset_right = -8.0
+offset_bottom = -229.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "From: Wife"
