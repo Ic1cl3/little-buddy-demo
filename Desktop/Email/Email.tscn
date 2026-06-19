@@ -3,7 +3,6 @@
 [ext_resource type="Theme" uid="uid://b5xp13uwnqjpc" path="res://Theme.tres" id="1_i0kjd"]
 [ext_resource type="Script" uid="uid://bfhd7lq6ffqqy" path="res://Desktop/Email/Email.gd" id="2_yfmt7"]
 [ext_resource type="FontFile" uid="uid://d33s0qhowux2k" path="res://ChelseaMarket-Regular.ttf" id="3_7di45"]
-[ext_resource type="PackedScene" uid="uid://dcy6ic1jlbxcl" path="res://Desktop/Email/InboxMessage.tscn" id="3_xx5vo"]
 [ext_resource type="AudioStream" uid="uid://bm5qst10r3r0g" path="res://Desktop/Email/Send.mp3" id="4_qfg83"]
 [ext_resource type="AudioStream" uid="uid://dfecb47yaiwmx" path="res://Desktop/Email/Choose.mp3" id="5_7s6p7"]
 [ext_resource type="AudioStream" uid="uid://cl838s1sxham6" path="res://Desktop/Email/Attach.mp3" id="5_r8esi"]
@@ -167,61 +166,6 @@ layout_mode = 2
 theme = ExtResource("1_i0kjd")
 theme_override_styles/normal = SubResource("StyleBoxFlat_o0or1")
 text = " No new messages"
-
-[node name="InboxMessage" parent="TabContainer/GetMail/VBoxContainer" unique_id=936670629 instance=ExtResource("3_xx5vo")]
-layout_mode = 2
-
-[node name="InboxMessage2" parent="TabContainer/GetMail/VBoxContainer" unique_id=913891879 instance=ExtResource("3_xx5vo")]
-layout_mode = 2
-mouse_filter = 0
-
-[node name="InboxMessage3" parent="TabContainer/GetMail/VBoxContainer" unique_id=1040427721 instance=ExtResource("3_xx5vo")]
-layout_mode = 2
-mouse_filter = 0
-
-[node name="InboxMessage4" parent="TabContainer/GetMail/VBoxContainer" unique_id=1493426584 instance=ExtResource("3_xx5vo")]
-layout_mode = 2
-mouse_filter = 0
-
-[node name="InboxMessage5" parent="TabContainer/GetMail/VBoxContainer" unique_id=1603345236 instance=ExtResource("3_xx5vo")]
-layout_mode = 2
-mouse_filter = 0
-
-[node name="InboxMessage6" parent="TabContainer/GetMail/VBoxContainer" unique_id=82275114 instance=ExtResource("3_xx5vo")]
-layout_mode = 2
-mouse_filter = 0
-
-[node name="InboxMessage7" parent="TabContainer/GetMail/VBoxContainer" unique_id=1073420533 instance=ExtResource("3_xx5vo")]
-layout_mode = 2
-mouse_filter = 0
-
-[node name="InboxMessage8" parent="TabContainer/GetMail/VBoxContainer" unique_id=508343519 instance=ExtResource("3_xx5vo")]
-layout_mode = 2
-mouse_filter = 0
-
-[node name="InboxMessage9" parent="TabContainer/GetMail/VBoxContainer" unique_id=1639213671 instance=ExtResource("3_xx5vo")]
-layout_mode = 2
-mouse_filter = 0
-
-[node name="InboxMessage10" parent="TabContainer/GetMail/VBoxContainer" unique_id=636947430 instance=ExtResource("3_xx5vo")]
-layout_mode = 2
-mouse_filter = 0
-
-[node name="InboxMessage11" parent="TabContainer/GetMail/VBoxContainer" unique_id=1860554672 instance=ExtResource("3_xx5vo")]
-layout_mode = 2
-mouse_filter = 0
-
-[node name="InboxMessage12" parent="TabContainer/GetMail/VBoxContainer" unique_id=253967376 instance=ExtResource("3_xx5vo")]
-layout_mode = 2
-mouse_filter = 0
-
-[node name="InboxMessage13" parent="TabContainer/GetMail/VBoxContainer" unique_id=2037729790 instance=ExtResource("3_xx5vo")]
-layout_mode = 2
-mouse_filter = 0
-
-[node name="InboxMessage14" parent="TabContainer/GetMail/VBoxContainer" unique_id=1987571945 instance=ExtResource("3_xx5vo")]
-layout_mode = 2
-mouse_filter = 0
 
 [node name="SendMail" type="Control" parent="TabContainer" unique_id=1679618558]
 visible = false

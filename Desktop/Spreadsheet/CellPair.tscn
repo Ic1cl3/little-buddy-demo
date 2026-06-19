@@ -40,7 +40,7 @@ LeftVal = "ded"
 layout_mode = 0
 offset_right = 256.0
 offset_bottom = 48.0
-color = Color(0.20784314, 0.21960784, 0.49411765, 1)
+color = Color(0.20392157, 0.16470589, 0.35686275, 1)
 
 [node name="LeftSide" type="Label" parent="." unique_id=96720727]
 layout_mode = 0

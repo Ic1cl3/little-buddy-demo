@@ -1,6 +1,20 @@
 [gd_scene format=3 uid="uid://72fphnxv3tjp"]
 
 [ext_resource type="Theme" uid="uid://b5xp13uwnqjpc" path="res://Theme.tres" id="1_n4xh8"]
+[ext_resource type="Script" uid="uid://so5xocay6jip" path="res://Desktop/Email/RecievedMessage.gd" id="2_pixa3"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n4xh8"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.61960787, 0.61960787, 0.61960787, 0)
+draw_center = false
+border_width_bottom = 2
+corner_detail = 5
+expand_margin_left = 8.0
+expand_margin_right = 512.0
+expand_margin_bottom = 8.0
 
 [node name="RecievedMessage" type="Window" unique_id=477794700]
 oversampling_override = 1.0
@@ -11,6 +25,7 @@ transient = true
 unresizable = true
 maximize_disabled = true
 theme = ExtResource("1_n4xh8")
+script = ExtResource("2_pixa3")
 
 [node name="Background" type="ColorRect" parent="." unique_id=712086964]
 anchors_preset = 15
@@ -30,6 +45,7 @@ offset_right = -8.0
 offset_bottom = -229.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_n4xh8")
 text = "From: Wife"
 
 [node name="Text" type="Label" parent="." unique_id=853523006]
@@ -37,9 +53,12 @@ anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 9.0
-offset_top = 5.0
+offset_top = 44.0
 offset_right = -8.0
-offset_bottom = -229.0
+offset_bottom = -9.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "From: Wife"
+text = "What? - Joe biden"
+autowrap_mode = 3
+
+[connection signal="close_requested" from="." to="." method="_on_close_requested"]

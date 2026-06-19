@@ -2,6 +2,8 @@
 
 [ext_resource type="Theme" uid="uid://b5xp13uwnqjpc" path="res://Theme.tres" id="1_2alhb"]
 [ext_resource type="Script" uid="uid://b0s41kouy52pf" path="res://Desktop/Email/InboxMessage.gd" id="1_y5ova"]
+[ext_resource type="Texture2D" uid="uid://duxncnsjm2xuh" path="res://Desktop/Email/Open.png" id="3_bj512"]
+[ext_resource type="AudioStream" uid="uid://cgxfvhap2t4tb" path="res://Desktop/Email/Open.mp3" id="4_tcw4n"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_67kiv"]
 content_margin_left = 0.0
@@ -16,6 +18,48 @@ expand_margin_left = 8.0
 expand_margin_right = 512.0
 expand_margin_bottom = 8.0
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tcw4n"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(1, 1, 1, 0.9882353)
+corner_radius_top_left = 80
+corner_radius_top_right = 80
+corner_radius_bottom_right = 80
+corner_radius_bottom_left = 80
+corner_detail = 5
+shadow_color = Color(0, 0, 0, 1)
+shadow_offset = Vector2(0, 10)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bj512"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.5124433, 0.5124433, 0.5124433, 0.9882353)
+corner_radius_top_left = 80
+corner_radius_top_right = 80
+corner_radius_bottom_right = 80
+corner_radius_bottom_left = 80
+corner_detail = 5
+shadow_color = Color(0, 0, 0, 1)
+shadow_offset = Vector2(0, 10)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s4k7q"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.63130707, 0.63130707, 0.63130707, 0.9882353)
+corner_radius_top_left = 80
+corner_radius_top_right = 80
+corner_radius_bottom_right = 80
+corner_radius_bottom_left = 80
+corner_detail = 5
+shadow_color = Color(0, 0, 0, 1)
+shadow_offset = Vector2(0, 10)
+
 [node name="InboxMessage" type="MarginContainer" unique_id=913891879]
 anchors_preset = -1
 anchor_right = 512.0
@@ -25,8 +69,6 @@ theme_override_constants/margin_left = 8
 theme_override_constants/margin_top = 8
 theme_override_constants/margin_bottom = 8
 script = ExtResource("1_y5ova")
-from = "Boss"
-subject = "What the fuck is this data?"
 
 [node name="Parent" type="PanelContainer" parent="." unique_id=379567391]
 layout_mode = 2
@@ -35,4 +77,23 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_67kiv")
 [node name="Info" type="Label" parent="Parent" unique_id=814206634]
 layout_mode = 2
 theme = ExtResource("1_2alhb")
-text = "[New!] Boss - \"What the fuck is this data?\""
+text = "[New!]  - \"\""
+
+[node name="Button" type="Button" parent="Parent/Info" unique_id=981274514]
+layout_mode = 0
+offset_left = 457.0
+offset_top = -8.0
+offset_right = 490.0
+offset_bottom = 27.0
+theme = ExtResource("1_2alhb")
+theme_override_styles/normal = SubResource("StyleBoxFlat_tcw4n")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_bj512")
+theme_override_styles/hover = SubResource("StyleBoxFlat_s4k7q")
+text = "   "
+icon = ExtResource("3_bj512")
+icon_alignment = 1
+
+[node name="Open" type="AudioStreamPlayer" parent="." unique_id=70615401]
+stream = ExtResource("4_tcw4n")
+
+[connection signal="pressed" from="Parent/Info/Button" to="." method="_on_button_pressed"]
