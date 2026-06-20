@@ -11,10 +11,6 @@ var normalTime = true
 var normalOffAbility = true
 
 
-func _ready() -> void:
-	Master.sendEmail(load("res://StoryData/Emails/Quote.tres"), 30)
-
-
 func _process(_delta: float) -> void:
 	# Assign time label
 	var currentTime = Time.get_datetime_dict_from_system()

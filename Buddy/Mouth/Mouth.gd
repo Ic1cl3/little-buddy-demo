@@ -35,7 +35,7 @@ func getRandomHeights() -> Array[Vector2]:
 	return output
 
 
-func speak(message = AudioStream) -> void:
+func speak(message : AudioStream) -> void:
 	player.stream = message
 	speaking = true
 	player.play()

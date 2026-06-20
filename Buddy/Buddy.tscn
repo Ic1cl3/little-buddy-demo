@@ -5,7 +5,6 @@
 [ext_resource type="Script" uid="uid://wcf60n0yf276" path="res://Buddy/Buddy.gd" id="1_ke3vf"]
 [ext_resource type="Texture2D" uid="uid://cnfr61b0m0vsm" path="res://Buddy/Eyehalf.png" id="3_0vvkh"]
 [ext_resource type="Texture2D" uid="uid://davoa3m5ekw8a" path="res://Buddy/Shinehalf.png" id="3_a6a5i"]
-[ext_resource type="Script" uid="uid://bakxvtiaoadcy" path="res://Desktop/Cover.gd" id="6_ciedh"]
 [ext_resource type="PackedScene" uid="uid://cb6c7ro28frun" path="res://Buddy/Mouth/Mouth.tscn" id="6_txexp"]
 
 [sub_resource type="Gradient" id="Gradient_e56cd"]
@@ -14,7 +13,7 @@ colors = PackedColorArray(0.5612889, 0.50932455, 0.91271544, 1, 0.18212655, 0.38
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_e56cd"]
 noise_type = 3
 frequency = 0.0609
-offset = Vector3(598502.94, 495261.8, 0)
+offset = Vector3(635303.06, 509313.62, 0)
 fractal_type = 3
 fractal_octaves = 9
 
@@ -684,14 +683,3 @@ parameters/Emotion/blend_amount = 0.0
 parameters/CrazyStrength/blend_amount = 0.001
 parameters/Closeness/blend_amount = 0.0
 parameters/Crazyness/add_amount = 0.0
-
-[node name="Cover" type="ColorRect" parent="." unique_id=2144670052]
-visible = false
-z_index = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0, 0, 0, 0.49803922)
-script = ExtResource("6_ciedh")

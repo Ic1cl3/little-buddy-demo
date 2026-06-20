@@ -2,8 +2,82 @@
 
 [ext_resource type="Script" uid="uid://brtxci3p51hou" path="res://StoryData/StoryEvent.gd" id="1_1qpcc"]
 [ext_resource type="Script" uid="uid://h1elbrtswclq" path="res://StoryData/StoryData.gd" id="2_7bgjm"]
+[ext_resource type="Script" uid="uid://bp2pkeyj0o1gf" path="res://StoryData/Delay.gd" id="2_ned32"]
+[ext_resource type="Script" uid="uid://dm0am25mbm8l2" path="res://StoryData/Shift.gd" id="3_ipt4m"]
+[ext_resource type="Script" uid="uid://cxsa5ek7awc6" path="res://StoryData/VoiceQueue.gd" id="4_op3bp"]
+[ext_resource type="AudioStream" uid="uid://c2kjb11oi2sf3" path="res://StoryData/Voicelines/Test.mp3" id="5_grp73"]
+[ext_resource type="Script" uid="uid://d1oq5k35dwlfw" path="res://StoryData/MasterSignalEmit.gd" id="6_op3bp"]
+[ext_resource type="Resource" uid="uid://cyaulpbv4i6ry" path="res://StoryData/Emails/Quote.tres" id="7_8frsr"]
+[ext_resource type="Script" uid="uid://dt75oi2tpnly7" path="res://StoryData/MailTrigger.gd" id="8_rb3en"]
+[ext_resource type="Script" uid="uid://7mo30svx14b" path="res://StoryData/Morph.gd" id="9_rb3en"]
+[ext_resource type="Script" uid="uid://47a0tt0dg0qi" path="res://StoryData/Voicelines/MasterSignalHalt.gd" id="10_7let3"]
+
+[sub_resource type="Resource" id="Resource_oywg1"]
+script = ExtResource("9_rb3en")
+shapeName = "Default"
+metadata/_custom_type_script = "uid://7mo30svx14b"
+
+[sub_resource type="Resource" id="Resource_8frsr"]
+script = ExtResource("2_ned32")
+length = 4.0
+metadata/_custom_type_script = "uid://bp2pkeyj0o1gf"
+
+[sub_resource type="Resource" id="Resource_rb3en"]
+script = ExtResource("3_ipt4m")
+position = Vector2(0.8, 0.75)
+time = 2.0
+relative = true
+metadata/_custom_type_script = "uid://dm0am25mbm8l2"
+
+[sub_resource type="Resource" id="Resource_7let3"]
+script = ExtResource("4_op3bp")
+voiceline = ExtResource("5_grp73")
+metadata/_custom_type_script = "uid://cxsa5ek7awc6"
+
+[sub_resource type="Resource" id="Resource_grp73"]
+script = ExtResource("6_op3bp")
+signalName = "test"
+metadata/_custom_type_script = "uid://d1oq5k35dwlfw"
+
+[sub_resource type="Resource" id="Resource_lqw8k"]
+script = ExtResource("8_rb3en")
+message = ExtResource("7_8frsr")
+delay = 15.0
+parallel = true
+metadata/_custom_type_script = "uid://dt75oi2tpnly7"
+
+[sub_resource type="Resource" id="Resource_ns0mt"]
+script = ExtResource("9_rb3en")
+shapeName = "Arrow"
+time = 1.0
+parallel = true
+metadata/_custom_type_script = "uid://7mo30svx14b"
+
+[sub_resource type="Resource" id="Resource_dwffl"]
+script = ExtResource("3_ipt4m")
+position = Vector2(670, 230)
+time = 1.0
+parallel = true
+metadata/_custom_type_script = "uid://dm0am25mbm8l2"
+
+[sub_resource type="Resource" id="Resource_js647"]
+script = ExtResource("4_op3bp")
+voiceline = ExtResource("5_grp73")
+metadata/_custom_type_script = "uid://cxsa5ek7awc6"
+
+[sub_resource type="Resource" id="Resource_q4lkc"]
+script = ExtResource("10_7let3")
+signalName = "emailed"
+metadata/_custom_type_script = "uid://47a0tt0dg0qi"
+
+[sub_resource type="Resource" id="Resource_37ffi"]
+script = ExtResource("3_ipt4m")
+position = Vector2(2, 2)
+time = 5.0
+relative = true
+metadata/_custom_type_script = "uid://dm0am25mbm8l2"
 
 [resource]
 script = ExtResource("2_7bgjm")
-events = Array[ExtResource("1_1qpcc")]([null])
+events = Array[ExtResource("1_1qpcc")]([SubResource("Resource_oywg1"), SubResource("Resource_8frsr"), SubResource("Resource_rb3en"), SubResource("Resource_7let3"), SubResource("Resource_grp73"), SubResource("Resource_lqw8k"), SubResource("Resource_ns0mt"), SubResource("Resource_dwffl"), SubResource("Resource_js647"), SubResource("Resource_q4lkc"), SubResource("Resource_37ffi")])
 metadata/_custom_type_script = "uid://h1elbrtswclq"

@@ -2,7 +2,11 @@ class_name Buddy
 extends Window
 
 
+signal haltFinished
+
+
 @export var shapes : Shapes = preload("res://Buddy/Shapes.tres")
+var storyData : StoryData = preload("res://StoryData/Story.tres")
 @onready var animTree : AnimationTree = $AnimationTree
 @onready var outline = $Outline
 @onready var mouthi : mouth = $Mouth
@@ -10,11 +14,14 @@ extends Window
 
 func _ready() -> void:
 	await get_tree().process_frame
+	Master.test.connect(test)
 	shift(1.25, 0.75, 0)
-	outline.points = shapes.shapes["Default"]
-	await get_tree().create_timer(5).timeout
-	await shift(0.833, 0.75, 3)
-	mouthi.speak(load("res://StoryData/Voicelines/Test.mp3"))
+	for event : StoryEvent in storyData.events:
+		if event.parallel:
+			parseEvent(event)
+		else:
+			await parseEvent(event)
+		print(event)
 
 
 func _process(_delta: float) -> void:
@@ -84,3 +91,37 @@ func shift(newPosX : float, newPosY : float, time : float = 1, relative : bool =
 	tween.stop()
 	tween.tween_callback(queue_free)
 	return
+
+
+func finishHalt() -> void:
+	emit_signal("haltFinished")
+
+
+func parseEvent(event: StoryEvent) -> void:
+	if event is Delay:
+		await get_tree().create_timer(event.length).timeout
+		return
+	elif event is MailTrigger:
+		Master.sendEmail(event.message, event.delay)
+		await get_tree().create_timer(event.delay).timeout
+		return
+	elif event is MasterSignalEmit:
+		Master.emit_signal(event.signalName)
+		return
+	elif event is MasterSignalHalt:
+		Master.connect(event.signalName, finishHalt)
+		await haltFinished
+		return
+	elif event is Morph:
+		await morph(event.shapeName)
+		return
+	elif event is Shift:
+		await shift(event.position.x, event.position.y, event.time, event.relative)
+		return
+	elif event is VoiceQueue:
+		await mouthi.speak(event.voiceline)
+		return
+
+
+func test():
+	print("tested!")

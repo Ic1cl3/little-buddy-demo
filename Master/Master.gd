@@ -3,6 +3,8 @@ extends Node
 
 
 signal emailed
+@warning_ignore("unused_signal")
+signal test
 
 
 var storyKeys : Dictionary = {
