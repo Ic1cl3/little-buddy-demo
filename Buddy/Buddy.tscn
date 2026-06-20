@@ -14,7 +14,7 @@ colors = PackedColorArray(0.5612889, 0.50932455, 0.91271544, 1, 0.18212655, 0.38
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_e56cd"]
 noise_type = 3
 frequency = 0.0609
-offset = Vector3(548339.7, 476155.4, 0)
+offset = Vector3(598502.94, 495261.8, 0)
 fractal_type = 3
 fractal_octaves = 9
 
