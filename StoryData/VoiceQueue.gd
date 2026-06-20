@@ -3,3 +3,4 @@ extends StoryEvent
 
 
 @export var voiceline : AudioStream
+@export var note : String

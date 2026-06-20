@@ -7,6 +7,7 @@ signal haltFinished
 
 @export var shapes : Shapes = preload("res://Buddy/Shapes.tres")
 var storyData : StoryData = preload("res://StoryData/Story.tres")
+var blinkTimer = 7.0
 @onready var animTree : AnimationTree = $AnimationTree
 @onready var outline = $Outline
 @onready var mouthi : mouth = $Mouth
@@ -23,8 +24,12 @@ func _ready() -> void:
 			await parseEvent(event)
 
 
-func _process(_delta: float) -> void:
+func _process(delta: float) -> void:
 	visible = get_parent().visible
+	blinkTimer -= delta
+	if blinkTimer <= 0:
+		blink()
+		blinkTimer = randf_range(7, 12)
 
 
 func set_parameter(param : String, value : float = 0, transitionTime : float = 0.2) -> void:
@@ -101,6 +106,16 @@ func finishHalt() -> void:
 func parseEvent(event: StoryEvent) -> void:
 	if event is Delay:
 		await get_tree().create_timer(event.length).timeout
+		return
+	elif event is ExpressionChange:
+		if event.change == ExpressionChange.expressions.EMOTION:
+			await set_emotion(event.value, event.time)
+		elif event.change == ExpressionChange.expressions.CRAZY_STRENGTH:
+			await set_CrazyStrength(event.value, event.time)
+		elif event.change == ExpressionChange.expressions.CLOSENESS:
+			await set_Closeness(event.value, event.time)
+		elif event.change == ExpressionChange.expressions.CRAZYNESS:
+			await set_Crazyness(event.value, event.time)
 		return
 	elif event is MailTrigger:
 		Master.sendEmail(event.message, event.delay)
