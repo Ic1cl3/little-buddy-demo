@@ -1,6 +1,9 @@
 extends Window
 
 
+var started : bool = false
+
+
 @onready var Clock = $BottomBar/Off/Clock
 
 
@@ -9,7 +12,7 @@ var normalOffAbility = true
 
 
 func _ready() -> void:
-	Master.sendEmail(load("res://StoryData/Emails/Quote.tres"), 10)
+	Master.sendEmail(load("res://StoryData/Emails/Quote.tres"), 30)
 
 
 func _process(_delta: float) -> void:

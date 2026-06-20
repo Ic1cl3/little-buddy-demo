@@ -171,10 +171,10 @@ iconImage = ExtResource("8_vfxqx")
 windowPath = "res://Desktop/Calculator/Calculator.tscn"
 metadata/_custom_type_script = "uid://hpf2kvtdcvu6"
 
-[node name="@Sprite2D@39985" type="Sprite2D" parent="Calculator" unique_id=615794765]
+[node name="@Sprite2D@205118" type="Sprite2D" parent="Calculator" unique_id=1277540068]
 texture = ExtResource("8_vfxqx")
 
-[node name="@Label@39986" type="Label" parent="Calculator" unique_id=956709528]
+[node name="@Label@205119" type="Label" parent="Calculator" unique_id=2044409478]
 offset_left = -43.0
 offset_top = 36.0
 offset_right = 43.0
@@ -183,7 +183,7 @@ theme = ExtResource("2_5h8ho")
 text = "Calculator"
 horizontal_alignment = 1
 
-[node name="@ColorRect@39987" type="ColorRect" parent="Calculator" unique_id=1253369068]
+[node name="@ColorRect@205120" type="ColorRect" parent="Calculator" unique_id=284480192]
 offset_left = -42.0
 offset_top = -37.0
 offset_right = 42.0
@@ -198,10 +198,10 @@ iconImage = ExtResource("9_vfxqx")
 windowPath = "res://Desktop/Spreadsheet/Spreadsheet.tscn"
 metadata/_custom_type_script = "uid://hpf2kvtdcvu6"
 
-[node name="@Sprite2D@39988" type="Sprite2D" parent="Spreadsheet" unique_id=1669058207]
+[node name="@Sprite2D@185394" type="Sprite2D" parent="Spreadsheet" unique_id=97136225]
 texture = ExtResource("9_vfxqx")
 
-[node name="@Label@39989" type="Label" parent="Spreadsheet" unique_id=67954824]
+[node name="@Label@185395" type="Label" parent="Spreadsheet" unique_id=1216580409]
 offset_left = -50.5
 offset_top = 36.0
 offset_right = 50.5
@@ -210,7 +210,7 @@ theme = ExtResource("2_5h8ho")
 text = "Spreadsheet"
 horizontal_alignment = 1
 
-[node name="@ColorRect@39990" type="ColorRect" parent="Spreadsheet" unique_id=1093835941]
+[node name="@ColorRect@185396" type="ColorRect" parent="Spreadsheet" unique_id=57023496]
 offset_left = -42.0
 offset_top = -37.0
 offset_right = 42.0
@@ -272,9 +272,7 @@ offset_bottom = 53.0
 color = Color(1, 1, 1, 0)
 
 [node name="Buddy" parent="." unique_id=2106673213 instance=ExtResource("14_m3ujb")]
-z_index = 1
-position = Vector2(1435, 713)
-shapes = Dictionary[String, PackedVector2Array]({})
+visible = false
 
 [node name="Cover" type="ColorRect" parent="." unique_id=1373664585]
 visible = false

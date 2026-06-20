@@ -5,7 +5,6 @@
 [ext_resource type="Script" uid="uid://wcf60n0yf276" path="res://Buddy/Buddy.gd" id="1_ke3vf"]
 [ext_resource type="Texture2D" uid="uid://cnfr61b0m0vsm" path="res://Buddy/Eyehalf.png" id="3_0vvkh"]
 [ext_resource type="Texture2D" uid="uid://davoa3m5ekw8a" path="res://Buddy/Shinehalf.png" id="3_a6a5i"]
-[ext_resource type="Script" uid="uid://bakxvtiaoadcy" path="res://Desktop/Cover.gd" id="6_ciedh"]
 
 [sub_resource type="Gradient" id="Gradient_e56cd"]
 colors = PackedColorArray(0.5612889, 0.50932455, 0.91271544, 1, 0.18212655, 0.38206396, 0.7448189, 1)
@@ -13,7 +12,7 @@ colors = PackedColorArray(0.5612889, 0.50932455, 0.91271544, 1, 0.18212655, 0.38
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_e56cd"]
 noise_type = 3
 frequency = 0.0609
-offset = Vector3(388639.03, 414562.75, 0)
+offset = Vector3(319028.22, 386908.53, 0)
 fractal_type = 3
 fractal_octaves = 9
 
@@ -40,7 +39,7 @@ length = 0.26666668
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("EyeParent/Eyes:scale")
+tracks/0/path = NodePath("Eyes:scale")
 tracks/0/interp = 2
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -56,7 +55,7 @@ length = 0.1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("EyeParent/Eyes/LeftEye/TopHalf:position")
+tracks/0/path = NodePath("Eyes/LeftEye/TopHalf:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -68,7 +67,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("EyeParent/Eyes/RightEye/TopHalf:position")
+tracks/1/path = NodePath("Eyes/RightEye/TopHalf:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -80,7 +79,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("EyeParent/Eyes/LeftEye/BottomHalf:position")
+tracks/2/path = NodePath("Eyes/LeftEye/BottomHalf:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -92,7 +91,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("EyeParent/Eyes/RightEye/BottomHalf:position")
+tracks/3/path = NodePath("Eyes/RightEye/BottomHalf:position")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -104,7 +103,7 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("EyeParent/Eyes/Bridge:scale")
+tracks/4/path = NodePath("Eyes/Bridge:scale")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
@@ -121,7 +120,7 @@ loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("EyeParent/Eyes:rotation")
+tracks/0/path = NodePath("Eyes:rotation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -137,7 +136,7 @@ length = 0.2
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("EyeParent/Eyes/LeftEye/TopHalf:position")
+tracks/0/path = NodePath("Eyes/LeftEye/TopHalf:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -149,7 +148,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("EyeParent/Eyes/LeftEye/BottomHalf:position")
+tracks/1/path = NodePath("Eyes/LeftEye/BottomHalf:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -161,7 +160,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("EyeParent/Eyes/LeftEye/BottomHalf:scale")
+tracks/2/path = NodePath("Eyes/LeftEye/BottomHalf:scale")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -173,7 +172,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("EyeParent/Eyes/RightEye/TopHalf:position")
+tracks/3/path = NodePath("Eyes/RightEye/TopHalf:position")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -185,7 +184,7 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("EyeParent/Eyes/RightEye/BottomHalf:position")
+tracks/4/path = NodePath("Eyes/RightEye/BottomHalf:position")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
@@ -197,7 +196,7 @@ tracks/4/keys = {
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("EyeParent/Eyes/RightEye/BottomHalf:scale")
+tracks/5/path = NodePath("Eyes/RightEye/BottomHalf:scale")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
@@ -213,7 +212,7 @@ length = 0.1998
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("EyeParent/Eyes/LeftEye/TopHalf:scale")
+tracks/0/path = NodePath("Eyes/LeftEye/TopHalf:scale")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -225,7 +224,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("EyeParent/Eyes/RightEye/TopHalf:scale")
+tracks/1/path = NodePath("Eyes/RightEye/TopHalf:scale")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -237,7 +236,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("EyeParent/Eyes/LeftEye/TopHalf:position")
+tracks/2/path = NodePath("Eyes/LeftEye/TopHalf:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -249,7 +248,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("EyeParent/Eyes/RightEye/TopHalf:position")
+tracks/3/path = NodePath("Eyes/RightEye/TopHalf:position")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -261,7 +260,7 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("EyeParent/Eyes/LeftEye/BottomHalf:position")
+tracks/4/path = NodePath("Eyes/LeftEye/BottomHalf:position")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
@@ -273,7 +272,7 @@ tracks/4/keys = {
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("EyeParent/Eyes/RightEye/BottomHalf:position")
+tracks/5/path = NodePath("Eyes/RightEye/BottomHalf:position")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
@@ -288,7 +287,7 @@ resource_name = "Idle"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("EyeParent/Eyes/LeftEye/TopHalf:position")
+tracks/0/path = NodePath("Eyes/LeftEye/TopHalf:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -300,7 +299,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("EyeParent/Eyes/LeftEye/TopHalf:scale")
+tracks/1/path = NodePath("Eyes/LeftEye/TopHalf:scale")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -312,7 +311,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("EyeParent/Eyes/LeftEye/BottomHalf:position")
+tracks/2/path = NodePath("Eyes/LeftEye/BottomHalf:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -324,7 +323,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("EyeParent/Eyes/LeftEye/BottomHalf:scale")
+tracks/3/path = NodePath("Eyes/LeftEye/BottomHalf:scale")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -336,7 +335,7 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("EyeParent/Eyes/RightEye/TopHalf:position")
+tracks/4/path = NodePath("Eyes/RightEye/TopHalf:position")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
@@ -351,7 +350,7 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("EyeParent/Eyes:scale")
+tracks/0/path = NodePath("Eyes:scale")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -363,7 +362,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("EyeParent/Eyes/LeftEye/TopHalf:position")
+tracks/1/path = NodePath("Eyes/LeftEye/TopHalf:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -375,7 +374,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("EyeParent/Eyes/LeftEye/TopHalf:scale")
+tracks/2/path = NodePath("Eyes/LeftEye/TopHalf:scale")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -387,7 +386,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("EyeParent/Eyes/RightEye/TopHalf:scale")
+tracks/3/path = NodePath("Eyes/RightEye/TopHalf:scale")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -399,7 +398,7 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("EyeParent/Eyes/RightEye/TopHalf:position")
+tracks/4/path = NodePath("Eyes/RightEye/TopHalf:position")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
@@ -411,7 +410,7 @@ tracks/4/keys = {
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("EyeParent/Eyes/LeftEye/BottomHalf:position")
+tracks/5/path = NodePath("Eyes/LeftEye/BottomHalf:position")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
@@ -423,7 +422,7 @@ tracks/5/keys = {
 tracks/6/type = "value"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath("EyeParent/Eyes/RightEye/BottomHalf:position")
+tracks/6/path = NodePath("Eyes/RightEye/BottomHalf:position")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
@@ -435,7 +434,7 @@ tracks/6/keys = {
 tracks/7/type = "value"
 tracks/7/imported = false
 tracks/7/enabled = true
-tracks/7/path = NodePath("EyeParent/Eyes/LeftEye/BottomHalf:scale")
+tracks/7/path = NodePath("Eyes/LeftEye/BottomHalf:scale")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
@@ -447,7 +446,7 @@ tracks/7/keys = {
 tracks/8/type = "value"
 tracks/8/imported = false
 tracks/8/enabled = true
-tracks/8/path = NodePath("EyeParent/Eyes/Bridge:scale")
+tracks/8/path = NodePath("Eyes/Bridge:scale")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
@@ -459,7 +458,7 @@ tracks/8/keys = {
 tracks/9/type = "value"
 tracks/9/imported = false
 tracks/9/enabled = true
-tracks/9/path = NodePath("EyeParent/Eyes/RightEye/BottomHalf:scale")
+tracks/9/path = NodePath("Eyes/RightEye/BottomHalf:scale")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/keys = {
@@ -471,7 +470,7 @@ tracks/9/keys = {
 tracks/10/type = "value"
 tracks/10/imported = false
 tracks/10/enabled = true
-tracks/10/path = NodePath("EyeParent/Eyes:rotation")
+tracks/10/path = NodePath("Eyes:rotation")
 tracks/10/interp = 1
 tracks/10/loop_wrap = true
 tracks/10/keys = {
@@ -483,7 +482,7 @@ tracks/10/keys = {
 tracks/11/type = "value"
 tracks/11/imported = false
 tracks/11/enabled = true
-tracks/11/path = NodePath("EyeParent/Eyes:skew")
+tracks/11/path = NodePath("Eyes:skew")
 tracks/11/interp = 1
 tracks/11/loop_wrap = true
 tracks/11/keys = {
@@ -500,7 +499,7 @@ loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("EyeParent/Eyes:rotation")
+tracks/0/path = NodePath("Eyes:rotation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -512,7 +511,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("EyeParent/Eyes:skew")
+tracks/1/path = NodePath("Eyes:skew")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -596,15 +595,8 @@ nodes/Crazyness/node = SubResource("AnimationNodeAdd2_a6a5i")
 nodes/Crazyness/position = Vector2(496, 208)
 node_connections = [&"output", 0, &"Blinker", &"Blinker", 0, &"Crazyness", &"Blinker", 1, &"Blink", &"Emotion", 0, &"Mad", &"Emotion", 1, &"Idle", &"Emotion", 2, &"Exited", &"CrazyStrength", 0, &"Crazy", &"CrazyStrength", 1, &"VeryCrazy", &"Closeness", 0, &"Emotion", &"Closeness", 1, &"Closely", &"Crazyness", 0, &"Closeness", &"Crazyness", 1, &"CrazyStrength"]
 
-[node name="Buddy" type="Window" unique_id=1239206608]
-transparent_bg = true
-oversampling_override = 1.0
-size = Vector2i(256, 256)
-unresizable = true
-borderless = true
-always_on_top = true
-transparent = true
-maximize_disabled = true
+[node name="Buddy" type="Node2D" unique_id=2106673213]
+scale = Vector2(1.5, 1.5)
 script = ExtResource("1_ke3vf")
 
 [node name="BackgroundTool" type="ColorRect" parent="." unique_id=516453832]
@@ -616,8 +608,6 @@ offset_bottom = 44.0
 script = ExtResource("1_dgoj4")
 
 [node name="Outline" type="Line2D" parent="." unique_id=1315741134]
-position = Vector2(127, 127)
-scale = Vector2(1.5, 1.5)
 points = PackedVector2Array(-45, -45, -40.537827, -34.98114, -36.939117, -27.402061, -32, -17, -43.965378, -9.735306, -60, 0, -46.404106, 8.254654, -32, 17, -38.119705, 30.180908, -45, 45, -29.6101, 37.85469, -17, 32, -8.94986, 45.25904, 0, 60, 8.777954, 45.542183, 17, 32, 32.597855, 39.24185, 45, 45, 38.50461, 31.009918, 32, 17, 45.72455, 8.667244, 60, 0, 45.280457, -8.936874, 32, -17, 38.32228, -30.617226, 45, -45, 31.207428, -38.596313, 17, -32, 8.715088, -45.645737, 0, -60, -8.02005, -46.7905, -17, -32)
 closed = true
 default_color = Color(0.22009468, 0.25774282, 0.79025716, 1)
@@ -630,39 +620,36 @@ polygon = PackedVector2Array(-45, -45, -40.537827, -34.98114, -36.939117, -27.40
 uv = PackedVector2Array(38, 38, 43.19125, 47.414333, 45.92627, 53.17443, 48.4, 60.4, 30.034622, 64.264694, 14, 74, 27.595894, 82.254654, 42, 91, 43.504234, 98.14473, 39.8, 108.2, 51.496323, 102.76956, 60.4, 99.6, 65.05014, 119.25904, 74, 134, 82.777954, 119.54218, 91, 106, 100.078285, 105.39348, 108.2, 108.2, 103.263504, 97.567535, 99.6, 87.6, 119.72455, 82.667244, 134, 74, 119.28046, 65.063126, 106, 57, 104.65782, 49.506218, 108.2, 39.8, 97.71764, 44.6668, 87.6, 48.4, 82.71509, 28.354263, 74, 14, 65.97995, 27.2095, 57, 42)
 script = ExtResource("1_awvid")
 
-[node name="EyeParent" type="Node2D" parent="." unique_id=1905700308]
-scale = Vector2(1.5, 1.5)
+[node name="Eyes" type="Node2D" parent="." unique_id=801158854]
+position = Vector2(-8.666667, -14)
 
-[node name="Eyes" type="Node2D" parent="EyeParent" unique_id=801158854]
-position = Vector2(78.66667, 74.66667)
-
-[node name="LeftEye" type="Node2D" parent="EyeParent/Eyes" unique_id=937462219]
+[node name="LeftEye" type="Node2D" parent="Eyes" unique_id=937462219]
 position = Vector2(-12, 0)
 scale = Vector2(0.5, 0.5)
 
-[node name="TopHalf" type="Sprite2D" parent="EyeParent/Eyes/LeftEye" unique_id=202635760]
+[node name="TopHalf" type="Sprite2D" parent="Eyes/LeftEye" unique_id=202635760]
 position = Vector2(0, -12)
 texture = ExtResource("3_a6a5i")
 
-[node name="BottomHalf" type="Sprite2D" parent="EyeParent/Eyes/LeftEye" unique_id=858217001]
+[node name="BottomHalf" type="Sprite2D" parent="Eyes/LeftEye" unique_id=858217001]
 position = Vector2(-1.9073486e-06, 12)
 rotation = 3.1415927
 texture = ExtResource("3_0vvkh")
 
-[node name="RightEye" type="Node2D" parent="EyeParent/Eyes" unique_id=428331980]
+[node name="RightEye" type="Node2D" parent="Eyes" unique_id=428331980]
 position = Vector2(12, 0)
 scale = Vector2(0.5, 0.5)
 
-[node name="TopHalf" type="Sprite2D" parent="EyeParent/Eyes/RightEye" unique_id=1845233376]
+[node name="TopHalf" type="Sprite2D" parent="Eyes/RightEye" unique_id=1845233376]
 position = Vector2(0, -12)
 texture = ExtResource("3_a6a5i")
 
-[node name="BottomHalf" type="Sprite2D" parent="EyeParent/Eyes/RightEye" unique_id=736828594]
+[node name="BottomHalf" type="Sprite2D" parent="Eyes/RightEye" unique_id=736828594]
 position = Vector2(-1.9073486e-06, 12)
 rotation = -3.1415925
 texture = ExtResource("3_0vvkh")
 
-[node name="Bridge" type="Sprite2D" parent="EyeParent/Eyes" unique_id=991624985]
+[node name="Bridge" type="Sprite2D" parent="Eyes" unique_id=991624985]
 scale = Vector2(1e-05, 1)
 texture = SubResource("GradientTexture2D_ke3vf")
 
@@ -679,14 +666,3 @@ parameters/Emotion/blend_amount = 0.0
 parameters/CrazyStrength/blend_amount = 0.001
 parameters/Closeness/blend_amount = 0.0
 parameters/Crazyness/add_amount = 0.0
-
-[node name="Cover" type="ColorRect" parent="." unique_id=2144670052]
-visible = false
-z_index = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0, 0, 0, 0.49803922)
-script = ExtResource("6_ciedh")
