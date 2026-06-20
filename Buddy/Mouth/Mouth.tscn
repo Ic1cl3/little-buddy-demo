@@ -2,14 +2,9 @@
 
 [ext_resource type="Script" uid="uid://br1xfswesp8na" path="res://Buddy/Mouth/Mouth.gd" id="1_5q2gl"]
 
-[sub_resource type="Curve" id="Curve_oui6o"]
-_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.17729084, 0.77629066), 2.8685076, 2.8685076, 0, 0, Vector2(0.31274903, 1), 0.0, 0.0, 0, 0, Vector2(0.4800797, 1), 0.0, 0.0, 0, 0, Vector2(0.65936255, 1), 0.0, 0.0, 0, 0, Vector2(0.8505976, 0.72657746), -2.9808578, -2.9808578, 0, 0, Vector2(0.99800795, 0), 0.0, 0.0, 0, 0]
-point_count = 7
-
 [node name="Mouth" type="Line2D" unique_id=203583554]
 points = PackedVector2Array(-20, 0, -16, 0, -12, 0, -8, 0, -4, 0, 0, 0, 4, 0, 8, 0, 12, 0, 16, 0, 20, 0)
 width = 4.0
-width_curve = SubResource("Curve_oui6o")
 default_color = Color(0, 0, 0, 1)
 joint_mode = 2
 begin_cap_mode = 2

@@ -21,7 +21,6 @@ func _ready() -> void:
 			parseEvent(event)
 		else:
 			await parseEvent(event)
-		print(event)
 
 
 func _process(_delta: float) -> void:
@@ -83,6 +82,8 @@ func shift(newPosX : float, newPosY : float, time : float = 1, relative : bool =
 		nextPos = Vector2i(newPos * Vector2(get_parent().size))
 	else:
 		nextPos = Vector2i(newPos)
+	@warning_ignore("integer_division")
+	nextPos -= size/2
 	var tween : Tween = create_tween()
 	tween.set_ease(Tween.EASE_IN_OUT)
 	tween.set_trans(Tween.TRANS_SINE)

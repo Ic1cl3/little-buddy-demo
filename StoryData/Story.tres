@@ -12,6 +12,11 @@
 [ext_resource type="Script" uid="uid://7mo30svx14b" path="res://StoryData/Morph.gd" id="9_rb3en"]
 [ext_resource type="Script" uid="uid://47a0tt0dg0qi" path="res://StoryData/Voicelines/MasterSignalHalt.gd" id="10_7let3"]
 
+[sub_resource type="Resource" id="Resource_24fkh"]
+script = ExtResource("2_ned32")
+length = 0.2
+metadata/_custom_type_script = "uid://bp2pkeyj0o1gf"
+
 [sub_resource type="Resource" id="Resource_oywg1"]
 script = ExtResource("9_rb3en")
 shapeName = "Default"
@@ -79,5 +84,5 @@ metadata/_custom_type_script = "uid://dm0am25mbm8l2"
 
 [resource]
 script = ExtResource("2_7bgjm")
-events = Array[ExtResource("1_1qpcc")]([SubResource("Resource_oywg1"), SubResource("Resource_8frsr"), SubResource("Resource_rb3en"), SubResource("Resource_7let3"), SubResource("Resource_grp73"), SubResource("Resource_lqw8k"), SubResource("Resource_ns0mt"), SubResource("Resource_dwffl"), SubResource("Resource_js647"), SubResource("Resource_q4lkc"), SubResource("Resource_37ffi")])
+events = Array[ExtResource("1_1qpcc")]([SubResource("Resource_24fkh"), SubResource("Resource_oywg1"), SubResource("Resource_8frsr"), SubResource("Resource_rb3en"), SubResource("Resource_7let3"), SubResource("Resource_grp73"), SubResource("Resource_lqw8k"), SubResource("Resource_ns0mt"), SubResource("Resource_dwffl"), SubResource("Resource_js647"), SubResource("Resource_q4lkc"), SubResource("Resource_37ffi")])
 metadata/_custom_type_script = "uid://h1elbrtswclq"
