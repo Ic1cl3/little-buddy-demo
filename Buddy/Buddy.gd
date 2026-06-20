@@ -12,6 +12,7 @@ var bind : SetBind.binds
 var lastFrameBindable = false
 var enteringBind = false
 var morphing = false
+var skipCount = 0
 @onready var animTree : AnimationTree = $AnimationTree
 @onready var outline = $Outline
 @onready var mouthi : mouth = $Mouth
@@ -24,6 +25,9 @@ func _ready() -> void:
 	Master.test.connect(test)
 	shift(1.25, 0.75, 0)
 	for event : StoryEvent in storyData.events:
+		if skipCount > 0:
+			skipCount -= 1
+			continue
 		if event.parallel:
 			parseEvent(event)
 		else:
@@ -133,7 +137,11 @@ func finishHalt() -> void:
 
 
 func parseEvent(event: StoryEvent) -> void:
-	if event is Delay:
+	if event is CallDelayed:
+		await get_tree().create_timer(event.length).timeout
+		await parseEvent(event.delayedCall)
+		return
+	elif event is Delay:
 		await get_tree().create_timer(event.length).timeout
 		return
 	elif event is ExpressionChange:
@@ -145,6 +153,14 @@ func parseEvent(event: StoryEvent) -> void:
 			await set_Closeness(event.value, event.time)
 		elif event.change == ExpressionChange.expressions.CRAZYNESS:
 			await set_Crazyness(event.value, event.time)
+		return
+	elif event is HaltUntilParam:
+		while not Master.storyKeys[event.paramName] == event.value:
+			await get_tree().process_frame
+		return
+	elif event is IfJump:
+		if Master.storyKeys[event.paramName] == event.value:
+			skipCount += event.skipAmount
 		return
 	elif event is MailTrigger:
 		Master.sendEmail(event.message, event.delay)
@@ -162,6 +178,9 @@ func parseEvent(event: StoryEvent) -> void:
 		return
 	elif event is SetBind:
 		bind = event.newBind
+		return
+	elif event is SetParam:
+		Master.storyKeys[event.paramName] = event.value
 		return
 	elif event is Shift:
 		await shift(event.position.x, event.position.y, event.time, event.relative)

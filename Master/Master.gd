@@ -13,7 +13,8 @@ var storyKeys : Dictionary = {
 	"emails" : [],
 	"inbox" : [],
 	"rabbit" : false,
-	"yayGame" : false
+	"yayGame" : false,
+	"testParam" : false
 }
 
 var openWindows : Dictionary = {
