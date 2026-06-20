@@ -274,6 +274,7 @@ color = Color(1, 1, 1, 0)
 [node name="Buddy" parent="." unique_id=2106673213 instance=ExtResource("14_m3ujb")]
 z_index = 1
 position = Vector2(1435, 713)
+shapes = Dictionary[String, PackedVector2Array]({})
 
 [node name="Cover" type="ColorRect" parent="." unique_id=1373664585]
 visible = false

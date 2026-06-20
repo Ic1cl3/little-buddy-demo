@@ -14,9 +14,9 @@ func _process(delta: float) -> void:
 	for vectorIndex in len(polygon):
 		var vector = polygon[vectorIndex]
 		if vectorIndex % 8 <= 3:
-			vector *= 1.2
+			vector *= 0.8
 			if vectorIndex % 8 == 1 or vectorIndex % 8 == 2:
-				vector *= 1.15
+				vector *= 0.95
 		var vTransform = (vector + Vector2(74, 74) + sieze*Vector2(randf(), randf()))
 		newUV.append(vTransform)
 	uv = newUV

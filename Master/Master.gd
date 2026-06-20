@@ -43,7 +43,6 @@ var sheetAnswers = [
 
 func _ready() -> void:
 	addWindow("res://Menu/Menu.tscn", true)
-	sendEmail(load("res://StoryData/Emails/Quote.tres"), 10)
 
 
 func addWindow(scenePath : String, forceNative = false, parent = self) -> void:
