@@ -5,9 +5,13 @@ extends Window
 signal haltFinished
 
 
-@export var shapes : Shapes = preload("res://Buddy/Shapes.tres")
+const shapes : Shapes = preload("res://Buddy/Shapes.tres")
 var storyData : StoryData = preload("res://StoryData/Story.tres")
 var blinkTimer = 7.0
+var bind : SetBind.binds
+var lastFrameBindable = false
+var enteringBind = false
+var morphing = false
 @onready var animTree : AnimationTree = $AnimationTree
 @onready var outline = $Outline
 @onready var mouthi : mouth = $Mouth
@@ -15,6 +19,8 @@ var blinkTimer = 7.0
 
 func _ready() -> void:
 	await get_tree().process_frame
+	while shapes == null:
+		await get_tree().process_frame
 	Master.test.connect(test)
 	shift(1.25, 0.75, 0)
 	for event : StoryEvent in storyData.events:
@@ -30,6 +36,27 @@ func _process(delta: float) -> void:
 	if blinkTimer <= 0:
 		blink()
 		blinkTimer = randf_range(7, 12)
+	if bind == SetBind.binds.NONE:
+		return
+	else:
+		var target : String
+		if bind == SetBind.binds.PONG:
+			target = "pong"
+		elif bind == SetBind.binds.SPREADSHEET:
+			target = "spreadsheet"
+		else:
+			target = "email"
+		if Master.primaryWindows[target] == null:
+			return
+		var site = Master.primaryWindows[target]
+		var yOffset = site.size.y/2
+		var shiftDelay = 0.2
+		if site is Pong and Master.storyKeys["pongData"] != null and Master.storyKeys["yayGame"]:
+			yOffset = Master.storyKeys["pongData"]
+			shiftDelay = 0
+			if not morphing:
+				morph("Pong", 1)
+		shift(site.position.x + site.size.x + 100, site.position.y + yOffset, shiftDelay, false)
 
 
 func set_parameter(param : String, value : float = 0, transitionTime : float = 0.2) -> void:
@@ -69,6 +96,7 @@ func blink() -> void:
 
 
 func morph(shape : String, transitionTime : float = 0.75) -> void:
+	morphing = true
 	var tween : Tween = create_tween()
 	tween.set_ease(Tween.EASE_IN_OUT)
 	tween.set_trans(Tween.TRANS_EXPO)
@@ -76,6 +104,7 @@ func morph(shape : String, transitionTime : float = 0.75) -> void:
 	await tween.finished
 	tween.stop()
 	tween.tween_callback(queue_free)
+	morphing = false
 	return
 
 
@@ -131,6 +160,9 @@ func parseEvent(event: StoryEvent) -> void:
 	elif event is Morph:
 		await morph(event.shapeName)
 		return
+	elif event is SetBind:
+		bind = event.newBind
+		return
 	elif event is Shift:
 		await shift(event.position.x, event.position.y, event.time, event.relative)
 		return
@@ -141,3 +173,7 @@ func parseEvent(event: StoryEvent) -> void:
 
 func test():
 	print("tested!")
+
+
+func beBinded():
+	enteringBind = false

@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://h1elbrtswclq" path="res://StoryData/StoryData.gd" id="2_7bgjm"]
 [ext_resource type="Script" uid="uid://bp2pkeyj0o1gf" path="res://StoryData/Delay.gd" id="2_ned32"]
 [ext_resource type="Script" uid="uid://dm0am25mbm8l2" path="res://StoryData/Shift.gd" id="3_ipt4m"]
-[ext_resource type="Script" uid="uid://jo8ucaumyryw" path="res://StoryData/ExpressionChange.gd" id="5_ipt4m"]
+[ext_resource type="Script" uid="uid://dsg4j284plcpw" path="res://StoryData/SetBind.gd" id="5_ipt4m"]
 [ext_resource type="Script" uid="uid://7mo30svx14b" path="res://StoryData/Morph.gd" id="9_rb3en"]
 
 [sub_resource type="Resource" id="Resource_24fkh"]
@@ -31,50 +31,48 @@ metadata/_custom_type_script = "uid://dm0am25mbm8l2"
 
 [sub_resource type="Resource" id="Resource_op3bp"]
 script = ExtResource("5_ipt4m")
-value = -0.8
-time = 0.2
-metadata/_custom_type_script = "uid://jo8ucaumyryw"
-
-[sub_resource type="Resource" id="Resource_ipt4m"]
-script = ExtResource("2_ned32")
-length = 1.0
-metadata/_custom_type_script = "uid://bp2pkeyj0o1gf"
+newBind = 1
+metadata/_custom_type_script = "uid://dsg4j284plcpw"
 
 [sub_resource type="Resource" id="Resource_grp73"]
-script = ExtResource("5_ipt4m")
-change = 2
-value = 1.0
-time = 0.4
-metadata/_custom_type_script = "uid://jo8ucaumyryw"
+script = ExtResource("2_ned32")
+length = 15.0
+metadata/_custom_type_script = "uid://bp2pkeyj0o1gf"
 
 [sub_resource type="Resource" id="Resource_7let3"]
 script = ExtResource("5_ipt4m")
-change = 2
-time = 0.4
-metadata/_custom_type_script = "uid://jo8ucaumyryw"
+metadata/_custom_type_script = "uid://dsg4j284plcpw"
+
+[sub_resource type="Resource" id="Resource_ipt4m"]
+script = ExtResource("2_ned32")
+length = 3.0
+metadata/_custom_type_script = "uid://bp2pkeyj0o1gf"
 
 [sub_resource type="Resource" id="Resource_lqw8k"]
 script = ExtResource("5_ipt4m")
-value = 0.8
-time = 0.5
-parallel = true
-metadata/_custom_type_script = "uid://jo8ucaumyryw"
+newBind = 3
+metadata/_custom_type_script = "uid://dsg4j284plcpw"
 
 [sub_resource type="Resource" id="Resource_js647"]
-script = ExtResource("5_ipt4m")
-change = 3
-value = 1.0
-time = 4.0
-metadata/_custom_type_script = "uid://jo8ucaumyryw"
+script = ExtResource("2_ned32")
+length = 10.0
+metadata/_custom_type_script = "uid://bp2pkeyj0o1gf"
 
 [sub_resource type="Resource" id="Resource_dwffl"]
 script = ExtResource("5_ipt4m")
-change = 1
-value = 1.0
-time = 3.0
-metadata/_custom_type_script = "uid://jo8ucaumyryw"
+newBind = 2
+metadata/_custom_type_script = "uid://dsg4j284plcpw"
+
+[sub_resource type="Resource" id="Resource_ns0mt"]
+script = ExtResource("2_ned32")
+length = 10.0
+metadata/_custom_type_script = "uid://bp2pkeyj0o1gf"
+
+[sub_resource type="Resource" id="Resource_q4lkc"]
+script = ExtResource("5_ipt4m")
+metadata/_custom_type_script = "uid://dsg4j284plcpw"
 
 [resource]
 script = ExtResource("2_7bgjm")
-events = Array[ExtResource("1_1qpcc")]([SubResource("Resource_24fkh"), SubResource("Resource_oywg1"), SubResource("Resource_8frsr"), SubResource("Resource_rb3en"), SubResource("Resource_op3bp"), SubResource("Resource_ipt4m"), SubResource("Resource_grp73"), SubResource("Resource_7let3"), SubResource("Resource_lqw8k"), SubResource("Resource_js647"), SubResource("Resource_dwffl")])
+events = Array[ExtResource("1_1qpcc")]([SubResource("Resource_24fkh"), SubResource("Resource_oywg1"), SubResource("Resource_8frsr"), SubResource("Resource_rb3en"), SubResource("Resource_op3bp"), SubResource("Resource_grp73"), SubResource("Resource_7let3"), SubResource("Resource_ipt4m"), SubResource("Resource_lqw8k"), SubResource("Resource_js647"), SubResource("Resource_dwffl"), SubResource("Resource_ns0mt"), SubResource("Resource_q4lkc")])
 metadata/_custom_type_script = "uid://h1elbrtswclq"

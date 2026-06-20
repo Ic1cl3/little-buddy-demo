@@ -24,8 +24,10 @@ var speaking : bool = false
 func _process(_delta: float) -> void:
 	if not speaking:
 		points = PackedVector2Array(defaultPoints)
+		hide()
 	else:
 		points = PackedVector2Array(getRandomHeights())
+		show()
 
 
 func getRandomHeights() -> Array[Vector2]:

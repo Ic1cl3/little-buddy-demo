@@ -12,7 +12,8 @@ var storyKeys : Dictionary = {
 	"sheetEntries" : [],
 	"emails" : [],
 	"inbox" : [],
-	"rabbit" : false
+	"rabbit" : false,
+	"yayGame" : false
 }
 
 var openWindows : Dictionary = {
@@ -45,6 +46,11 @@ var sheetAnswers = [
 
 func _ready() -> void:
 	addWindow("res://Menu/Menu.tscn", true)
+
+
+func _process(_delta: float) -> void:
+	if primaryWindows["pong"] != null:
+		storyKeys["pongData"] = primaryWindows["pong"].rightPaddle.position.y
 
 
 func addWindow(scenePath : String, forceNative = false, parent = self) -> void:
