@@ -5,14 +5,16 @@ extends Window
 @export var shapes : Shapes = preload("res://Buddy/Shapes.tres")
 @onready var animTree : AnimationTree = $AnimationTree
 @onready var outline = $Outline
+@onready var mouthi : mouth = $Mouth
 
 
 func _ready() -> void:
 	await get_tree().process_frame
 	shift(1.25, 0.75, 0)
 	outline.points = shapes.shapes["Default"]
-	await get_tree().create_timer(6).timeout
-	shift(0.833, 0.75, 3)
+	await get_tree().create_timer(5).timeout
+	await shift(0.833, 0.75, 3)
+	mouthi.speak(load("res://StoryData/Voicelines/Test.mp3"))
 
 
 func _process(_delta: float) -> void:

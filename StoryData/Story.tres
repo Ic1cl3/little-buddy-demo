@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="StoryData" format=3 uid="uid://chqwku03oqmn2"]
+
+[ext_resource type="Script" uid="uid://brtxci3p51hou" path="res://StoryData/StoryEvent.gd" id="1_1qpcc"]
+[ext_resource type="Script" uid="uid://h1elbrtswclq" path="res://StoryData/StoryData.gd" id="2_7bgjm"]
+
+[resource]
+script = ExtResource("2_7bgjm")
+metadata/_custom_type_script = "uid://h1elbrtswclq"
