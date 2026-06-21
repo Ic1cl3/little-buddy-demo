@@ -80,5 +80,6 @@ func _on_send_pressed() -> void:
 	Master.storyKeys["emails"].append(message)
 	messageEdit.text = "Sent!"
 	send.play()
+	Master.emit_signal("sent")
 	await get_tree().create_timer(0.8).timeout
 	messageEdit.text = ""

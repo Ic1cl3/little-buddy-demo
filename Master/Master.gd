@@ -4,6 +4,8 @@ extends Node
 
 signal emailed
 @warning_ignore("unused_signal")
+signal sent
+@warning_ignore("unused_signal")
 signal test
 
 
@@ -14,7 +16,12 @@ var storyKeys : Dictionary = {
 	"inbox" : [],
 	"rabbit" : false,
 	"yayGame" : false,
-	"testParam" : false
+	"testParam" : false,
+	"emailOpen" : false,
+	"pongOpen" : false,
+	"spreadsheetOpen" : false,
+	"emailOrPongOpen" : false,
+	"spreadsheetOrPongOpen" : false
 }
 
 var openWindows : Dictionary = {
@@ -52,6 +59,11 @@ func _ready() -> void:
 func _process(_delta: float) -> void:
 	if primaryWindows["pong"] != null:
 		storyKeys["pongData"] = primaryWindows["pong"].rightPaddle.position.y
+	storyKeys["emailOpen"] = openWindows["email"] > 0
+	storyKeys["pongOpen"] = openWindows["pong"] > 0
+	storyKeys["spreadsheetOpen"] = openWindows["spreadsheet"] > 0
+	storyKeys["emailOrPongOpen"] = storyKeys["emailOpen"] or storyKeys["pongOpen"]
+	storyKeys["spreadsheetOrPongOpen"] = storyKeys["spreadsheetOpen"] or storyKeys["pongOpen"]
 
 
 func addWindow(scenePath : String, forceNative = false, parent = self) -> void:
