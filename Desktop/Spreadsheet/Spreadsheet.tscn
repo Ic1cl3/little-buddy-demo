@@ -136,6 +136,21 @@ text = "Mango-Cookie Dealings"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="Label0" type="Label" parent="Label0" unique_id=1110360777]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 32.0
+offset_bottom = 32.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 21
+text = "Autosave Enabled on Close"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="Label1" type="Label" parent="." unique_id=931726662]
 offset_left = 16.0
 offset_top = 160.0

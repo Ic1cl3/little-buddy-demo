@@ -22,5 +22,6 @@ func _on_close_requested() -> void:
 	for child : CellPair in sheet.get_children():
 		info.append(child.entry)
 	Master.storyKeys["sheetEntries"] = info
+	Master.checkSheet()
 	Master.openWindows["spreadsheet"] -= 1
 	queue_free()

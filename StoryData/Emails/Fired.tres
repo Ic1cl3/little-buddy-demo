@@ -4,6 +4,6 @@
 
 [resource]
 script = ExtResource("1_cb2pg")
-subject = "\"Termination\""
-text = "You know how serious our work is here at Mango-Cookie Incorperated. We will not tolerate employees, such as you, who got a reccord amount of dealings incorrect. You are fired, effective immedietly. Goodbye, loser."
+subject = "Termination"
+text = "You know how serious our work is here at Mango-Cookie Incorperated. We do not tolerate employees, such as you, who got a reccord amount of dealings incorrect. You are fired, effective immedietly. Goodbye, loser."
 metadata/_custom_type_script = "uid://b1ilryikoynf1"

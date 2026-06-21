@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="IncomingMail" format=3 uid="uid://dfwxj5pv85dwy"]
+
+[ext_resource type="Script" uid="uid://b1ilryikoynf1" path="res://Desktop/Email/IncomingMail.gd" id="1_f3euy"]
+
+[resource]
+script = ExtResource("1_f3euy")
+from = 1
+subject = "Groceries"
+text = "Can you please grab tomatos and toast from the grocery store on your way home? Thanks."
+metadata/_custom_type_script = "uid://b1ilryikoynf1"

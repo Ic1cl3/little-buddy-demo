@@ -6,8 +6,26 @@ extends Window
 @export var incoming : IncomingMail
 
 
+var finalSubjects : Array = [
+	"Termination",
+	"Good Work Today",
+	"Exceptional Work"
+]
+
+
 @onready var from = $From
 @onready var text = $Text
+
+
+func _ready() -> void:
+	var final = false
+	for possible in finalSubjects:
+		if incoming.subject == possible:
+			final = true
+	if final:
+		print("bs")
+		Master.storyKeys["endingRead"] = true
+		Master.divorcedCheck()
 
 
 func _process(_delta: float) -> void:

@@ -3,6 +3,8 @@ extends Node
 
 
 signal emailed
+signal clockedIn
+signal prepareEnding
 @warning_ignore("unused_signal")
 signal sent
 @warning_ignore("unused_signal")
@@ -15,13 +17,20 @@ var storyKeys : Dictionary = {
 	"emails" : [],
 	"inbox" : [],
 	"rabbit" : false,
-	"yayGame" : false,
+	"yayGame" : true,
 	"testParam" : false,
 	"emailOpen" : false,
 	"pongOpen" : false,
 	"spreadsheetOpen" : false,
 	"emailOrPongOpen" : false,
-	"spreadsheetOrPongOpen" : false
+	"spreadsheetOrPongOpen" : false,
+	"finishedWork" : false,
+	"score" : false,
+	"divorce" : false,
+	"fired" : false,
+	"likePong" : false,
+	"endingRead" : false,
+	"goTime" : false
 }
 
 var openWindows : Dictionary = {
@@ -37,23 +46,25 @@ var primaryWindows : Dictionary = {
 }
 
 var sheetAnswers = [
-	6.5, 3.0, 6.5,
-	0.0, 7.0, 6.0,
-	3.25, 4.0, 17.0,
-	13.0, 7.0, 3.25,
-	16.25, 15.0, 19.0,
-	6.5, 0.0, 9.75,
-	16.25, 101.0, 0.0,
-	6.5,  9.0, 11.0,
-	39.0, 47.0, 22.75,
-	26.0, 27.0, "rabbit",
-	29.25, 41.0, 31.0,
-	3.25, 0.0, 19.5
+	6.5, 3, 6.5,
+	0, 7, 6,
+	3.25, 4, 17,
+	13, 7, 3.25,
+	16.25, 15, 19,
+	6.5, 0, 9.75,
+	16.25, 101, 0,
+	6.5,  9, 11,
+	39, 47, 22.75,
+	26, 27, "RABBIT",
+	29.25, 41, 31,
+	3.25, 0, 19.5
 ]
 
 
 func _ready() -> void:
 	addWindow("res://Menu/Menu.tscn", true)
+	clockedIn.connect(checkEmail)
+	prepareEnding.connect(endEmail)
 
 
 func _process(_delta: float) -> void:
@@ -85,9 +96,62 @@ func sendEmail(email : IncomingMail, delay : float = 0):
 
 func checkSheet() -> float:
 	var points = 0.0
+	var anyEmpty = false
 	for i in range(len(storyKeys["sheetEntries"])):
-		if sheetAnswers[i] in str(storyKeys["sheetEntries"][i]).to_upper():
+		if str(storyKeys["sheetEntries"][i]) == "":
+			anyEmpty = true
+			continue
+		if str(sheetAnswers[i]) in str(storyKeys["sheetEntries"][i]).to_upper():
 			points += 1.0
 			if i == 29:
 				storyKeys["rabbit"] = true
+	storyKeys["score"] = points/36
+	storyKeys["finishedWork"] = not anyEmpty
+	if points/36 < 0.6:
+		storyKeys["fired"] = true
 	return (points/36)
+
+
+func checkEmail():
+	var email : Message = storyKeys["emails"][len(storyKeys["emails"]) - 1]
+	var steamyStrings = ["SEX", "PENIS", "PUSSY", "SUCK", "CUM", "ORGASM", "FUCK YOU", "COCK", "DICK", "LOVE", "HEART", "AFFAIR", "CHEAT", "WIFE", "HUSBAND", "BABY"]
+	var strongStrings = ["FUCK", "DAMN", "SHIT", "ASS", "CUNT", "IDIOT", "LARP", "RETARD"]
+	var steamy = false
+	var strong = false
+	for string in steamyStrings:
+		if string in email.text.to_upper():
+			steamy = true
+			strong = true
+	for string in  strongStrings:
+		if string in email.text.to_upper():
+			strong = true
+	if email.recipient == Message.recipients.WIFE:
+		if strong:
+			sendEmail(load("res://StoryData/Emails/HoneyWhat.tres"), 30)
+		else:
+			sendEmail(load("res://StoryData/Emails/Honey.tres"), 30)
+	else:
+		if steamy:
+			storyKeys["divorced"] = true
+		if strong:
+			sendEmail(load("res://StoryData/Emails/Problem.tres"), 30)
+		else:
+			sendEmail(load("res://StoryData/Emails/Thanks.tres"), 30)
+
+
+func endEmail():
+	var fired = storyKeys["fired"]
+	var score = storyKeys["score"]
+	if fired:
+		sendEmail(load("res://StoryData/Emails/Fired.tres"), 40)
+		return
+	else:
+		if score == 1:
+			sendEmail(load("res://StoryData/Emails/Wow.tres"), 40)
+		else:
+			sendEmail(load("res://StoryData/Emails/Pass.tres"), 40)
+
+
+func divorcedCheck():
+	if storyKeys["divorce"]:
+		sendEmail(load("res://StoryData/Emails/Divorced.tres"), 10)

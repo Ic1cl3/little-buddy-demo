@@ -85,7 +85,7 @@ polygon = PackedVector2Array(0, 0, 512, 0, 687, 1, 684, 512, 470, 512, 0, 512, 0
 
 [node name="Bounce" type="AudioStreamPlayer" parent="." unique_id=1483997840]
 stream = ExtResource("7_bq606")
-volume_db = -10.0
+volume_db = -3.401
 pitch_scale = 1.16
 
 [node name="Win" type="AudioStreamPlayer" parent="." unique_id=1457102408]

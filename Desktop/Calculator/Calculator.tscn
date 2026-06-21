@@ -159,7 +159,7 @@ text = "  =  "
 
 [node name="Punch" type="AudioStreamPlayer" parent="." unique_id=1108006563]
 stream = ExtResource("3_np68b")
-volume_db = -7.235
+volume_db = -1.292
 
 [node name="Compute" type="AudioStreamPlayer" parent="." unique_id=14313640]
 stream = ExtResource("3_phkx1")
