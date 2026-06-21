@@ -1,0 +1,39 @@
+[gd_resource type="Resource" script_class="StoryData" format=3 uid="uid://bbqivwx67w4a4"]
+
+[ext_resource type="Script" uid="uid://brtxci3p51hou" path="res://StoryData/StoryEvent.gd" id="1_h33r5"]
+[ext_resource type="Script" uid="uid://cxsa5ek7awc6" path="res://StoryData/VoiceQueue.gd" id="2_5675y"]
+[ext_resource type="Script" uid="uid://h1elbrtswclq" path="res://StoryData/StoryData.gd" id="2_pvjbd"]
+[ext_resource type="AudioStream" uid="uid://bbp8l5mxbuaj4" path="res://StoryData/Voicelines/TurnedOff.mp3" id="3_gck2j"]
+[ext_resource type="Script" uid="uid://jo8ucaumyryw" path="res://StoryData/ExpressionChange.gd" id="4_gck2j"]
+[ext_resource type="AudioStream" uid="uid://xx8wg18d7vmw" path="res://StoryData/Voicelines/Forever.mp3" id="4_p8xdm"]
+
+[sub_resource type="Resource" id="Resource_pqfes"]
+script = ExtResource("2_5675y")
+voiceline = ExtResource("3_gck2j")
+metadata/_custom_type_script = "uid://cxsa5ek7awc6"
+
+[sub_resource type="Resource" id="Resource_p8xdm"]
+script = ExtResource("4_gck2j")
+change = 3
+value = 1.0
+time = 1.0
+parallel = true
+metadata/_custom_type_script = "uid://jo8ucaumyryw"
+
+[sub_resource type="Resource" id="Resource_5j5sh"]
+script = ExtResource("4_gck2j")
+change = 1
+value = 1.0
+time = 1.0
+parallel = true
+metadata/_custom_type_script = "uid://jo8ucaumyryw"
+
+[sub_resource type="Resource" id="Resource_2o3xf"]
+script = ExtResource("2_5675y")
+voiceline = ExtResource("4_p8xdm")
+metadata/_custom_type_script = "uid://cxsa5ek7awc6"
+
+[resource]
+script = ExtResource("2_pvjbd")
+events = Array[ExtResource("1_h33r5")]([SubResource("Resource_pqfes"), SubResource("Resource_p8xdm"), SubResource("Resource_5j5sh"), SubResource("Resource_2o3xf")])
+metadata/_custom_type_script = "uid://h1elbrtswclq"

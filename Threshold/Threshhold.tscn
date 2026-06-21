@@ -1,0 +1,119 @@
+[gd_scene format=3 uid="uid://bex2obk5kkj7d"]
+
+[ext_resource type="Theme" uid="uid://b5xp13uwnqjpc" path="res://Theme.tres" id="1_7tsqr"]
+[ext_resource type="Texture2D" uid="uid://bn4g6qw3lbn67" path="res://Threshold/CrackFrames/0.png" id="2_c750d"]
+[ext_resource type="Script" uid="uid://cyrryr35w8id3" path="res://Threshold/Threshold.gd" id="2_jtjxn"]
+[ext_resource type="Texture2D" uid="uid://8r4u44d2cq83" path="res://Threshold/CrackFrames/-1.png" id="3_00y0g"]
+[ext_resource type="Texture2D" uid="uid://bpr1lpcdyb6k7" path="res://Threshold/CrackFrames/1.png" id="3_xlmob"]
+[ext_resource type="Texture2D" uid="uid://cc15fikopfuol" path="res://Threshold/CrackFrames/2.png" id="5_idasj"]
+[ext_resource type="Texture2D" uid="uid://bgfmpkkxc0re3" path="res://Threshold/CrackFrames/3.png" id="6_00y0g"]
+[ext_resource type="Texture2D" uid="uid://cx244dpxfecm0" path="res://Threshold/CrackFrames/4.png" id="7_liav1"]
+[ext_resource type="Texture2D" uid="uid://gjdtaesx48oq" path="res://Threshold/CrackFrames/5.png" id="8_3bfou"]
+[ext_resource type="AudioStream" uid="uid://vb3eb4qeqyrl" path="res://Threshold/Hit.mp3" id="9_4rern"]
+[ext_resource type="PackedScene" uid="uid://b147jdqi3ily6" path="res://Buddy/Buddy.tscn" id="10_idasj"]
+[ext_resource type="Texture2D" uid="uid://bsarro43rvkbq" path="res://Desktop/PowerDown.png" id="12_liav1"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_sfnak"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_00y0g")
+}],
+"loop": true,
+"name": &"-1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_c750d")
+}],
+"loop": true,
+"name": &"0",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_xlmob")
+}],
+"loop": true,
+"name": &"1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_idasj")
+}],
+"loop": true,
+"name": &"2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_00y0g")
+}],
+"loop": true,
+"name": &"3",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_liav1")
+}],
+"loop": true,
+"name": &"4",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_3bfou")
+}],
+"loop": true,
+"name": &"5",
+"speed": 5.0
+}]
+
+[node name="Window" type="Window" unique_id=1039579366]
+transparent_bg = true
+oversampling_override = 1.0
+mode = 3
+initial_position = 4
+size = Vector2i(1920, 1080)
+unresizable = true
+always_on_top = true
+transparent = true
+minimize_disabled = true
+maximize_disabled = true
+theme = ExtResource("1_7tsqr")
+script = ExtResource("2_jtjxn")
+
+[node name="Shatter" type="AnimatedSprite2D" parent="." unique_id=1627645090]
+sprite_frames = SubResource("SpriteFrames_sfnak")
+animation = &"-1"
+offset = Vector2(960, 540)
+
+[node name="Flash" type="ColorRect" parent="." unique_id=1177024329]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Bang" type="AudioStreamPlayer" parent="." unique_id=513775263]
+stream = ExtResource("9_4rern")
+
+[node name="Buddy" parent="." unique_id=1239206608 instance=ExtResource("10_idasj")]
+visible = false
+desktop = false
+
+[node name="Button" type="Button" parent="." unique_id=794224954]
+offset_left = 857.0
+offset_top = -287.0
+offset_right = 1049.0
+offset_bottom = -95.0
+text = " "
+icon = ExtResource("12_liav1")
+icon_alignment = 1
+expand_icon = true
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

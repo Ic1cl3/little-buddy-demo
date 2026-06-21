@@ -13,7 +13,7 @@ colors = PackedColorArray(0.5612889, 0.50932455, 0.91271544, 1, 0.18212655, 0.38
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_e56cd"]
 noise_type = 3
 frequency = 0.0609
-offset = Vector3(1201860.6, 726689.9, 0)
+offset = Vector3(1285004.4, 758708, 0)
 fractal_type = 3
 fractal_octaves = 9
 
@@ -568,7 +568,6 @@ animation = &"GetMad"
 animation = &"VeryCrazy"
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_e7pyq"]
-graph_offset = Vector2(157.27646, 169.94162)
 nodes/output/position = Vector2(944, 160)
 nodes/Idle/node = SubResource("AnimationNodeAnimation_ke3vf")
 nodes/Idle/position = Vector2(-48, 144)

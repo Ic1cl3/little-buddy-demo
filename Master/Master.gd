@@ -155,3 +155,8 @@ func endEmail():
 func divorcedCheck():
 	if storyKeys["divorce"]:
 		sendEmail(load("res://StoryData/Emails/Divorced.tres"), 10)
+
+
+func doGo():
+	await get_tree().create_timer(3).timeout
+	addWindow("res://Threshold/Threshhold.tscn", true)

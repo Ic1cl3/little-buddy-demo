@@ -10,7 +10,11 @@ func _on_quit_pressed() -> void:
 	await get_tree().create_timer(0.81).timeout
 	get_parent().hide()
 	await $ClosePlayer.finished
-	get_tree().quit()
+	if not Master.storyKeys["goTime"]:
+		get_tree().quit()
+	else:
+		Master.doGo()
+		get_parent().queue_free()
 
 
 func _on_dont_quit_pressed() -> void:

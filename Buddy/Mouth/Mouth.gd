@@ -22,9 +22,6 @@ var speaking : bool = false
 
 
 func _process(_delta: float) -> void:
-	if Input.is_action_just_pressed("q"):
-		player.playing = false
-		player.emit_signal("finished")
 	if not speaking:
 		points = PackedVector2Array(defaultPoints)
 		hide()

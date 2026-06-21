@@ -6,15 +6,19 @@ signal haltFinished
 
 
 const shapes : Shapes = preload("res://Buddy/Shapes.tres")
+@export var desktop = true
 var storyData : StoryData = preload("res://StoryData/Story.tres")
+var end : StoryData = preload("res://StoryData/End.tres")
 var blinkTimer = 7.0
 var bind : SetBind.binds
 var lastFrameBindable = false
 var enteringBind = false
 var morphing = false
 var skipCount = 0
+var constamorph = false
 @onready var animTree : AnimationTree = $AnimationTree
 @onready var outline = $Outline
+@onready var eyeParent = $EyeParent
 @onready var mouthi : mouth = $Mouth
 
 
@@ -23,6 +27,9 @@ func _ready() -> void:
 	while shapes == null:
 		await get_tree().process_frame
 	Master.test.connect(test)
+	if not desktop:
+		proceedDesk()
+		return
 	shift(1.25, 0.75, 0)
 	for event : StoryEvent in storyData.events:
 		if skipCount > 0:
@@ -35,7 +42,10 @@ func _ready() -> void:
 
 
 func _process(delta: float) -> void:
-	visible = get_parent().visible
+	if constamorph and not morphing:
+		morph(["Default", "Square", "Star", "Arrow"].pick_random(), 0.3)
+	if desktop:
+		visible = get_parent().visible
 	blinkTimer -= delta
 	if blinkTimer <= 0:
 		blink()
@@ -201,3 +211,28 @@ func test():
 
 func beBinded():
 	enteringBind = false
+
+
+func proceedDesk():
+	hide()
+	set_emotion(-0.8, 0)
+	shift(0.5, 0.5, 0)
+	morph("Default")
+	await get_tree().create_timer(22).timeout
+	outline.modulate = Color.TRANSPARENT
+	eyeParent.modulate = Color.TRANSPARENT
+	create_tween().tween_property(outline, "modulate", Color.WHITE, 1.3)
+	create_tween().tween_property(eyeParent, "modulate", Color.WHITE, 1.3)
+	show()
+	for event : StoryEvent in end.events:
+		if skipCount > 0:
+			skipCount -= 1
+			continue
+		if event.parallel:
+			parseEvent(event)
+		else:
+			await parseEvent(event)
+	get_parent().game = true
+	constamorph = true
+	while true:
+		await mouthi.speak(load("res://StoryData/Voicelines/Forever.mp3"))
