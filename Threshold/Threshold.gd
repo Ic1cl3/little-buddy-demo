@@ -9,6 +9,7 @@ var butDir = Vector2(randf(), randf()).normalized()
 @onready var flash = $Flash
 @onready var bang = $Bang
 @onready var button = $Button
+@onready var music = $Music
 
 
 func _ready() -> void:
@@ -27,7 +28,7 @@ func _process(delta: float) -> void:
 		button.show()
 		butDir += (Vector2(randf(), randf()).normalized())*2
 		butDir = butDir.normalized()
-		button.position += (butDir) * delta * 1400
+		button.position += (butDir) * delta * 1700
 		if button.position.y < -192:
 			button.position.y = size.y
 		if button.position.y > size.y:
@@ -36,6 +37,8 @@ func _process(delta: float) -> void:
 			button.position.x = size.x
 		if button.position.x > size.x:
 			button.position.x = -192
+		if not music.playing:
+			music.play()
 
 
 func hit():

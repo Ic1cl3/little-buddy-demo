@@ -12,6 +12,7 @@
 [ext_resource type="AudioStream" uid="uid://vb3eb4qeqyrl" path="res://Threshold/Hit.mp3" id="9_4rern"]
 [ext_resource type="PackedScene" uid="uid://b147jdqi3ily6" path="res://Buddy/Buddy.tscn" id="10_idasj"]
 [ext_resource type="Texture2D" uid="uid://bsarro43rvkbq" path="res://Desktop/PowerDown.png" id="12_liav1"]
+[ext_resource type="AudioStream" uid="uid://cc16uybsdh2uk" path="res://Music/PandemoniumDissarray.mp3" id="13_3bfou"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_sfnak"]
 animations = [{
@@ -115,5 +116,8 @@ text = " "
 icon = ExtResource("12_liav1")
 icon_alignment = 1
 expand_icon = true
+
+[node name="Music" type="AudioStreamPlayer" parent="." unique_id=1429445252]
+stream = ExtResource("13_3bfou")
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://dcicokx6vge12" path="res://Desktop/Spreadsheet/Icon.png" id="9_vfxqx"]
 [ext_resource type="Texture2D" uid="uid://cosjl23vhga5n" path="res://Desktop/InfoDoc/Icon.png" id="10_crrsb"]
 [ext_resource type="Texture2D" uid="uid://bbgm4kso1e8qq" path="res://Desktop/Email/Icon.png" id="10_gsv74"]
+[ext_resource type="AudioStream" uid="uid://cpx2b11a5fyfd" path="res://Music/DesktopDissaray.mp3" id="13_veaff"]
 [ext_resource type="PackedScene" uid="uid://b147jdqi3ily6" path="res://Buddy/Buddy.tscn" id="14_m3ujb"]
 
 [sub_resource type="Gradient" id="Gradient_ujh53"]
@@ -273,6 +274,9 @@ color = Color(1, 1, 1, 0)
 
 [node name="Buddy" parent="." unique_id=2106673213 instance=ExtResource("14_m3ujb")]
 visible = false
+
+[node name="Music" type="AudioStreamPlayer" parent="." unique_id=1288448515]
+stream = ExtResource("13_veaff")
 
 [node name="Cover" type="ColorRect" parent="." unique_id=1373664585]
 visible = false

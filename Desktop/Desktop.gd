@@ -5,6 +5,7 @@ var started : bool = false
 
 
 @onready var Clock = $BottomBar/Off/Clock
+@onready var music = $Music
 
 
 var normalTime = true
@@ -12,6 +13,8 @@ var normalOffAbility = true
 
 
 func _process(_delta: float) -> void:
+	if not music.playing:
+		music.play()
 	# Assign time label
 	var currentTime = Time.get_datetime_dict_from_system()
 	if normalTime:
