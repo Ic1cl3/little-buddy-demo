@@ -158,6 +158,10 @@ func parseEvent(event: StoryEvent) -> void:
 		while not Master.storyKeys[event.paramName] == event.value:
 			await get_tree().process_frame
 		return
+	elif event is IfDo:
+		if Master.storyKeys[event.paramName] == event.value:
+			await parseEvent(event.do)
+		return
 	elif event is IfJump:
 		if Master.storyKeys[event.paramName] == event.value:
 			skipCount += event.skipAmount
