@@ -174,7 +174,8 @@ func parseEvent(event: StoryEvent) -> void:
 		Master.emit_signal(event.signalName)
 		return
 	elif event is MasterSignalHalt:
-		Master.connect(event.signalName, finishHalt)
+		if not Master.is_connected(event.signalName, finishHalt):
+			Master.connect(event.signalName, finishHalt)
 		await haltFinished
 		return
 	elif event is Morph:
