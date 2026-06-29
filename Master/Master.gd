@@ -5,6 +5,7 @@ extends Node
 signal emailed
 signal clockedIn
 signal prepareEnding
+signal result
 @warning_ignore("unused_signal")
 signal sent
 @warning_ignore("unused_signal")
@@ -91,6 +92,8 @@ func sendEmail(email : IncomingMail, delay : float = 0):
 	await get_tree().create_timer(delay).timeout
 	storyKeys["inbox"].append(email)
 	emit_signal("emailed")
+	if email.subject in ["Termination", "Good Work Today", "Exceptional Work"]:
+		emit_signal("result")
 	addWindow("res://Desktop/Email/GotMail.tscn", false, $Desktop)
 
 

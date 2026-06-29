@@ -10,7 +10,7 @@ func _ready() -> void:
 	await get_tree().create_timer(3).timeout
 	back.hide()
 	tbc.show()
-	await get_tree().create_timer(6).timeout
+	await get_tree().create_timer(9).timeout
 	back.show()
 	await get_tree().create_timer(4).timeout
 	get_tree().quit()

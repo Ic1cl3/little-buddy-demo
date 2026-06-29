@@ -785,7 +785,7 @@ metadata/_custom_type_script = "uid://cxsa5ek7awc6"
 
 [sub_resource type="Resource" id="Resource_wme2o"]
 script = ExtResource("26_qnau4")
-signalName = "emailed"
+signalName = "result"
 metadata/_custom_type_script = "uid://47a0tt0dg0qi"
 
 [sub_resource type="Resource" id="Resource_n5bqn"]
