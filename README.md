@@ -20,3 +20,5 @@ The sounds are perhapse what I'm most proud of. Every sound effect is foley or s
 All of this works in my opinion, very well to tell a very fun story in a very unique experience.
 If you decide to play, let me know what you think. All feedback is valueble.
 ![screenshot](ss1.png)
+AI USE:
+	- AI was only used to clean up poor audio recordings - most of the voicelines were recorded ~24 hours before the jam was over with a not-very-good mic because I kinda forced the task upon my friend. I used AI to improve the audio quality of these reccordings. This is the only use of AI in the project.
