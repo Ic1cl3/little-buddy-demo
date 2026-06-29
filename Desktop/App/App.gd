@@ -84,7 +84,7 @@ func _process(delta: float) -> void:
 		Input.set_default_cursor_shape(Input.CURSOR_POINTING_HAND)
 		if iconImage != null and is_equal_approx(icon.scale.x, 1):
 			create_tween().tween_property(icon, "scale", Vector2(1.13, 1.13), 0.1).set_ease(Tween.EASE_IN_OUT).set_trans(Tween.TRANS_SINE)
-		if (not Engine.is_editor_hint()) and Input.is_action_just_released("lmb"):
+		if (not Engine.is_editor_hint()) and Input.is_action_just_released("lmb") and get_parent() == Window.get_focused_window():
 			Master.addWindow(windowPath, false, get_parent())
 	else:
 		Input.set_default_cursor_shape(Input.CURSOR_ARROW)
