@@ -58,4 +58,5 @@ func hit():
 
 func _on_button_pressed() -> void:
 	hide()
-	get_tree().quit()
+	Master.addWindow("res://End/End.tscn", true)
+	queue_free()

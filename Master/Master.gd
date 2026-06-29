@@ -132,7 +132,7 @@ func checkEmail():
 			sendEmail(load("res://StoryData/Emails/Honey.tres"), 30)
 	else:
 		if steamy:
-			storyKeys["divorced"] = true
+			storyKeys["divorce"] = true
 		if strong:
 			sendEmail(load("res://StoryData/Emails/Problem.tres"), 30)
 		else:
