@@ -23,7 +23,6 @@ func _ready() -> void:
 		if incoming.subject == possible:
 			final = true
 	if final:
-		print("bs")
 		Master.storyKeys["endingRead"] = true
 		Master.divorcedCheck()
 

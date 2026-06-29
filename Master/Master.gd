@@ -153,7 +153,9 @@ func endEmail():
 
 
 func divorcedCheck():
+	print("foo")
 	if storyKeys["divorce"]:
+		print("foo")
 		sendEmail(load("res://StoryData/Emails/Divorced.tres"), 10)
 
 

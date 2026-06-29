@@ -5,11 +5,13 @@ extends Window
 var shatFrame = -1
 var game = false
 var butDir = Vector2(randf(), randf()).normalized()
+var musicTimer = 120
 @onready var shatter = $Shatter
 @onready var flash = $Flash
 @onready var bang = $Bang
 @onready var button = $Button
 @onready var music = $Music
+@onready var music2 = $Music2
 
 
 func _ready() -> void:
@@ -21,6 +23,7 @@ func _ready() -> void:
 
 
 func _process(delta: float) -> void:
+	musicTimer += delta
 	shatter.play(str(shatFrame))
 	@warning_ignore("integer_division")
 	shatter.offset = Vector2(size/2) + Vector2(36, -39)
@@ -37,8 +40,12 @@ func _process(delta: float) -> void:
 			button.position.x = size.x
 		if button.position.x > size.x:
 			button.position.x = -192
-		if not music.playing:
-			music.play()
+		if musicTimer > 81.65:
+			if music.playing:
+				music2.play()
+			else:
+				music.play()
+			musicTimer = 0
 
 
 func hit():
