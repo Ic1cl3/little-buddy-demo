@@ -95,7 +95,7 @@ expand_margin_bottom = 2.0
 oversampling_override = 1.0
 title = "Spreadsheet"
 initial_position = 1
-size = Vector2i(800, 800)
+size = Vector2i(800, 500)
 transient = true
 unresizable = true
 maximize_disabled = true
@@ -103,7 +103,7 @@ theme = ExtResource("1_1uflm")
 script = ExtResource("2_i20nd")
 
 [node name="Background" type="ColorRect" parent="." unique_id=1708408061]
-anchors_preset = 15
+anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
@@ -111,23 +111,26 @@ grow_vertical = 2
 color = Color(0.20524082, 0.16609305, 0.35768616, 1)
 
 [node name="Panel" type="Panel" parent="." unique_id=1706378978]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 14.0
-offset_top = 158.0
-offset_right = -14.0
-offset_bottom = -14.0
+anchors_preset = -1
+anchor_left = 0.017
+anchor_top = 0.30600002
+anchor_right = 0.98200005
+anchor_bottom = 0.96000004
+offset_left = 0.39999962
+offset_top = -1.5258789e-05
+offset_right = 0.39996338
+offset_bottom = -3.0517578e-05
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_egwvx")
 
 [node name="Label0" type="Label" parent="." unique_id=631600481]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_top = 52.0
-offset_bottom = -696.0
+anchors_preset = -1
+anchor_top = 0.086
+anchor_right = 0.9990001
+anchor_bottom = 0.19000001
+offset_left = -1.0
+offset_right = -0.20007324
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
@@ -152,10 +155,13 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Label1" type="Label" parent="." unique_id=931726662]
-offset_left = 16.0
-offset_top = 160.0
-offset_right = 272.0
-offset_bottom = 208.0
+anchors_preset = -1
+anchor_left = 0.020000001
+anchor_top = 0.38000003
+anchor_right = 0.34
+anchor_bottom = 0.44000003
+offset_top = -35.000015
+offset_bottom = -29.000015
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 24
 theme_override_styles/normal = SubResource("StyleBoxFlat_i20nd")
@@ -165,10 +171,14 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Label2" type="Label" parent="." unique_id=1786007624]
-offset_left = 272.0
-offset_top = 160.0
-offset_right = 528.00024
-offset_bottom = 208.0
+anchors_preset = -1
+anchor_left = 0.34
+anchor_top = 0.38000003
+anchor_right = 0.66
+anchor_bottom = 0.44000003
+offset_top = -35.000015
+offset_right = 0.00024414063
+offset_bottom = -29.000015
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 24
 theme_override_styles/normal = SubResource("StyleBoxFlat_vsi7c")
@@ -178,10 +188,14 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Label3" type="Label" parent="." unique_id=1432047679]
-offset_left = 528.0
-offset_top = 160.0
-offset_right = 784.00024
-offset_bottom = 208.0
+anchors_preset = -1
+anchor_left = 0.66
+anchor_top = 0.38000003
+anchor_right = 0.98
+anchor_bottom = 0.44000003
+offset_top = -35.000015
+offset_right = 0.00024414063
+offset_bottom = -29.000015
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 24
 theme_override_styles/normal = SubResource("StyleBoxFlat_70d0t")
@@ -191,13 +205,12 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Sheet" type="GridContainer" parent="." unique_id=1206834385]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 16.0
-offset_top = 208.0
-offset_right = -16.0
-offset_bottom = -16.0
+anchors_preset = -1
+anchor_left = 0.020000001
+anchor_top = 0.44000003
+anchor_right = 0.98
+anchor_bottom = 0.8
+offset_top = -3.0517578e-05
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/h_separation = 256
@@ -215,78 +228,6 @@ LeftVal = "3, 4"
 [node name="CellPair3" parent="Sheet" unique_id=1465634731 instance=ExtResource("2_egwvx")]
 layout_mode = 2
 LeftVal = "5, 3"
-
-[node name="CellPair4" parent="Sheet" unique_id=1832134687 instance=ExtResource("2_egwvx")]
-layout_mode = 2
-LeftVal = "5, 5"
-
-[node name="CellPair5" parent="Sheet" unique_id=1775343961 instance=ExtResource("2_egwvx")]
-layout_mode = 2
-LeftVal = "2, 8"
-
-[node name="CellPair6" parent="Sheet" unique_id=209021005 instance=ExtResource("2_egwvx")]
-layout_mode = 2
-LeftVal = "3, 5"
-
-[node name="CellPair7" parent="Sheet" unique_id=528574939 instance=ExtResource("2_egwvx")]
-layout_mode = 2
-LeftVal = "6, 5"
-
-[node name="CellPair8" parent="Sheet" unique_id=1450399956 instance=ExtResource("2_egwvx")]
-layout_mode = 2
-LeftVal = "1, 13"
-
-[node name="CellPair9" parent="Sheet" unique_id=241484984 instance=ExtResource("2_egwvx")]
-layout_mode = 2
-LeftVal = "2, 13"
-
-[node name="CellPair10" parent="Sheet" unique_id=1816488053 instance=ExtResource("2_egwvx")]
-layout_mode = 2
-LeftVal = "5, 1"
-
-[node name="CellPair11" parent="Sheet" unique_id=1023347817 instance=ExtResource("2_egwvx")]
-layout_mode = 2
-LeftVal = "4, 4"
-
-[node name="CellPair12" parent="Sheet" unique_id=1728849722 instance=ExtResource("2_egwvx")]
-layout_mode = 2
-LeftVal = "5, 4"
-
-[node name="CellPair13" parent="Sheet" unique_id=1645025272 instance=ExtResource("2_egwvx")]
-layout_mode = 2
-LeftVal = "8, 3"
-
-[node name="CellPair14" parent="Sheet" unique_id=1570510860 instance=ExtResource("2_egwvx")]
-layout_mode = 2
-LeftVal = "3, 8"
-
-[node name="CellPair15" parent="Sheet" unique_id=1902172496 instance=ExtResource("2_egwvx")]
-layout_mode = 2
-LeftVal = "4, 7"
-
-[node name="CellPair16" parent="Sheet" unique_id=2006907988 instance=ExtResource("2_egwvx")]
-layout_mode = 2
-LeftVal = "7, 5"
-
-[node name="CellPair17" parent="Sheet" unique_id=398899148 instance=ExtResource("2_egwvx")]
-layout_mode = 2
-LeftVal = "3, 3"
-
-[node name="CellPair18" parent="Sheet" unique_id=514509205 instance=ExtResource("2_egwvx")]
-layout_mode = 2
-LeftVal = "7, 4"
-
-[node name="CellPair19" parent="Sheet" unique_id=912672679 instance=ExtResource("2_egwvx")]
-layout_mode = 2
-LeftVal = "9, 4"
-
-[node name="CellPair20" parent="Sheet" unique_id=1479123185 instance=ExtResource("2_egwvx")]
-layout_mode = 2
-LeftVal = "10, 11"
-
-[node name="CellPair21" parent="Sheet" unique_id=1675265728 instance=ExtResource("2_egwvx")]
-layout_mode = 2
-LeftVal = "2, 2"
 
 [node name="CellPair22" parent="Sheet" unique_id=1172831334 instance=ExtResource("2_egwvx")]
 layout_mode = 2

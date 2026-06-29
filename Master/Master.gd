@@ -48,12 +48,6 @@ var primaryWindows : Dictionary = {
 
 var sheetAnswers = [
 	6.5, 3, 6.5,
-	0, 7, 6,
-	3.25, 4, 17,
-	13, 7, 3.25,
-	16.25, 15, 19,
-	6.5, 0, 9.75,
-	16.25, 101, 0,
 	6.5,  9, 11,
 	39, 47, 22.75,
 	26, 27, "RABBIT",
@@ -156,9 +150,7 @@ func endEmail():
 
 
 func divorcedCheck():
-	print("foo")
 	if storyKeys["divorce"]:
-		print("foo")
 		sendEmail(load("res://StoryData/Emails/Divorced.tres"), 10)
 
 
