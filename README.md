@@ -20,5 +20,5 @@ The art for this game has also been fun to make, as most of it is just doodling 
 The sounds are perhapse what I'm most proud of. Every sound effect is foley or some instrumental jingle, reccorded live or composed in Musescore Studio 4.
 All of this works in my opinion, very well to tell a very fun story in a very unique experience.
 If you decide to play, let me know what you think. All feedback is valueble.
-<ss>
-<ss>
+![screenshot](ss0.png)
+![screenshot](ss1.png)
