@@ -254,6 +254,7 @@ windowPath = "res://Desktop/InfoDoc/InfoDoc.tscn"
 metadata/_custom_type_script = "uid://hpf2kvtdcvu6"
 
 [node name="@Sprite2D@39994" type="Sprite2D" parent="InfoDoc" unique_id=891163080]
+scale = Vector2(1.13, 1.13)
 texture = ExtResource("10_crrsb")
 
 [node name="@Label@39995" type="Label" parent="InfoDoc" unique_id=3293382]
@@ -277,6 +278,7 @@ visible = false
 
 [node name="Music" type="AudioStreamPlayer" parent="." unique_id=1288448515]
 stream = ExtResource("13_veaff")
+volume_db = -80.0
 
 [node name="Cover" type="ColorRect" parent="." unique_id=1373664585]
 visible = false

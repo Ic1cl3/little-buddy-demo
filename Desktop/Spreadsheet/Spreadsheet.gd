@@ -8,7 +8,7 @@ func _ready() -> void:
 	Master.openWindows["spreadsheet"] += 1
 	if Master.storyKeys["sheetEntries"] == []:
 		return
-	for i in range(36):
+	for i in range(18):
 		sheet.get_child(i).fill(Master.storyKeys["sheetEntries"][i])
 
 
